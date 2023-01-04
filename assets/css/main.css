@@ -1,6 +1,9 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 .bg-1 {
     background-color: #db8992;
