@@ -1,0 +1,9 @@
+name: "Landing"
+description: "Invitaciones gris & xavi..."
+author: "JC&LIZ"
+homepage: "http://invitaciones.test"
+code: "landing"
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'

@@ -1,0 +1,84 @@
+html {
+    scroll-behavior: smooth;
+}
+.bg-1 {
+    background-color: #db8992;
+    color: #fff;
+}
+.hero-area {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-area h1 {
+      color: #fff;
+}
+.hero-area p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.3;
+}
+.hero-area .counter {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 18px;
+}
+.hero-area .counter ul li {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    display: inline-block;
+    line-height: 25px;
+    padding: 25px 28px 20px;
+    text-align: center;
+    width: 49%;
+    margin-bottom: 3px;
+}
+.hero-area .counter ul li span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+.hero-area .counter ul li .digit {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+}
+.navigation {
+    background-color: transparent !important;
+    -webkit-transition: all 0.3s ease-in-out 0s !important;
+    -moz-transition: all 0.3s ease-in-out 0s !important;
+    -ms-transition: all 0.3s ease-in-out 0s !important;
+    -o-transition: all 0.3s ease-in-out 0s !important;
+    transition: all 0.3s ease-in-out 0s !important;
+    padding: 10px 50px !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+.navigation .navbar-brand {
+    padding-top: 5px;
+    display: inline-block;
+}
+.navigation .navbar-brand h2 {
+    color: #fff;
+}
+.navigation.animated .navbar-brand h2 {
+    color: #c51b70;
+}
+.navigation.animated {
+    background-color: #fff !important;
+    box-shadow: 0 2px 7px 0px rgba(142, 142, 142, 0.15) !important;
+}
+.navigation.animated #menuItems li a {
+    color: #666;
+}
+.navigation #menuItems li a {
+  color: #fff;
+  font-size: 16px;
+}
+.navigation #menuItems li a:hover, .navigation #menuItems li a:focus {
+    background: none;
+}
