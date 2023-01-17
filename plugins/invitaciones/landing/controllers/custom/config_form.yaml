@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Custom
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/custom/fields.yaml
+
+# Model Class name
+#modelClass: Invitaciones\Landing\Models\Custom
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/custom
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/custom/update/:id
+    redirectClose: invitaciones/landing/custom
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/custom
+    redirectClose: invitaciones/landing/custom
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
