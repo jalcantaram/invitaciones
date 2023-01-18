@@ -106,6 +106,12 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/seccionuno'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
+                    'seccion_dos' => [
+                        'label' => 'Sección dos',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/secciondos'),
+                        'permissions' => ['invitaciones.landing.*'],
+                    ],
                 ],
             ],
         ];
