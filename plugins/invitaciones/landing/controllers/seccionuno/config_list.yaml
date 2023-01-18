@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/invitaciones/landing/models/custom/columns.yaml
+list: $/invitaciones/landing/models/seccionuno/columns.yaml
 
 # Model Class name
-#modelClass: Invitaciones\Landing\Models\Custom
+modelClass: Invitaciones\Landing\Models\SeccionUno
 
 # List Title
-title: Manage Customs
+title: Manage Seccion Unos
 
 # Link URL for each record
-recordUrl: invitaciones/landing/custom/update/:id
+recordUrl: invitaciones/landing/seccionuno/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

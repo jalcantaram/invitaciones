@@ -3,28 +3,28 @@
 # ===================================
 
 # Record name
-name: Custom
+name: Seccion Uno
 
 # Model Form Field configuration
-form: $/invitaciones/landing/models/custom/fields.yaml
+form: $/invitaciones/landing/models/seccionuno/fields.yaml
 
 # Model Class name
-#modelClass: Invitaciones\Landing\Models\Custom
+modelClass: Invitaciones\Landing\Models\SeccionUno
 
 # Default redirect location
-defaultRedirect: invitaciones/landing/custom
+defaultRedirect: invitaciones/landing/seccionuno
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: invitaciones/landing/custom/update/:id
-    redirectClose: invitaciones/landing/custom
+    redirect: invitaciones/landing/seccionuno/update/:id
+    redirectClose: invitaciones/landing/seccionuno
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: invitaciones/landing/custom
-    redirectClose: invitaciones/landing/custom
+    redirect: invitaciones/landing/seccionuno
+    redirectClose: invitaciones/landing/seccionuno
 
 # Preview page
 preview:

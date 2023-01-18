@@ -50,10 +50,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Invitaciones\Landing\Components\MyComponent' => 'myComponent',
+            'Invitaciones\Landing\Components\SeccionUno' => 'seccionuno',
         ];
     }
 
@@ -81,14 +79,40 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-
         return [
             'landing' => [
+                // 'label'       => 'landing',
+                // 'url'         => Backend::url('invitaciones/landing/custom'),
+                // 'icon'        => 'icon-leaf',
+                // 'permissions' => ['invitaciones.landing.*'],
+                // 'order'       => 500,
+                // 'sideMenu' => [
+                //     'seccion_uno' => [
+                //         'label' => 'Primera sección (titulo)',
+                //         'icon' => 'icon-upload',
+                //         'url' => Backend::url('invitaciones/landing/seccion_uno'),
+                //         'permissions' => ['invitaciones.landing.*'],
+                //     ],
+                // ],
                 'label'       => 'landing',
-                'url'         => Backend::url('invitaciones/landing/custom'),
+                'url'         => Backend::url('invitaciones/landing/seccionuno'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['invitaciones.landing.*'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'seccion_uno' => [
+                        'label' => 'Primera sección (titulo)',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/seccionuno'),
+                        'permissions' => ['invitaciones.landing.*'],
+                    ],
+                    'seccion_dos' => [
+                        'label' => 'Sección dos',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/secciondos'),
+                        'permissions' => ['invitaciones.landing.*'],
+                    ],
+                ],
             ],
         ];
     }

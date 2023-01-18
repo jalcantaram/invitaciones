@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    titulo:
+        label: Titulo
+        placeholder: Titulo
+        description: Nombre del novio y la novia
+        required: true
+        type: text
+    sub_titulo:
+        label: Sub Titulo
+        placeholder: Sub Titulo
+        description: Ej. NUESTRA BODA
+        required: true
+        type: text
+    texto_complementario:
+        label: Texto complementario
+        placeholder: Texto complementario
+        description: Texto complementario
+        required: false
+        type: textarea
+        size: small

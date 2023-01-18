@@ -4,9 +4,9 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Custom Back-end Controller
+ * Seccion Uno Back-end Controller
  */
-class Custom extends Controller
+class SeccionUno extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -30,6 +30,6 @@ class Custom extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Invitaciones.Landing', 'landing', 'custom');
+        BackendMenu::setContext('Invitaciones.Landing', 'landing', 'seccionuno');
     }
 }
