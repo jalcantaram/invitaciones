@@ -1,4 +1,5 @@
 description = "Default layout"
+[seccionuno]
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ description = "Default layout"
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation" id="top-nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 1px;">Gris & Xavi</h2>
+                <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 4px;">{{ seccionuno.dataSeccion.titulo }}</h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuItems" aria-controls="menuItems" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,9 +57,7 @@ description = "Default layout"
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h1 class="text-center" style="font-family: 'Great Vibes', cursive;">Boda de</h1>
-                        <h1 style="font-family: 'Great Vibes', cursive; letter-spacing: 2px;">Griselda y Xavier</h1>
-                        <p>Tenemos el placer de invitarte al mejor momento de nuestras vidas, ese momento donde por fin uniremos nuestras vidas ante Dios y nuestros familiares y amigos cercanos</p>
+                        {% component "seccionuno" %}
                     </div>
                 </div>
                 <!--
