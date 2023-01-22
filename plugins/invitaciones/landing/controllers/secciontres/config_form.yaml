@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Seccion Tre
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/secciontres/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\SeccionTres
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/secciontres
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/secciontres/update/:id
+    redirectClose: invitaciones/landing/secciontres
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/secciontres
+    redirectClose: invitaciones/landing/secciontres
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

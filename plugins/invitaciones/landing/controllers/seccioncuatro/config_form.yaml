@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Seccion Cuatro
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/seccioncuatro/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\SeccionCuatro
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/seccioncuatro
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/seccioncuatro/update/:id
+    redirectClose: invitaciones/landing/seccioncuatro
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/seccioncuatro
+    redirectClose: invitaciones/landing/seccioncuatro
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
