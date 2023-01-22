@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Seccion Nueve
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/seccionnueve/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\SeccionNueve
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/seccionnueve
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/seccionnueve/update/:id
+    redirectClose: invitaciones/landing/seccionnueve
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/seccionnueve
+    redirectClose: invitaciones/landing/seccionnueve
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

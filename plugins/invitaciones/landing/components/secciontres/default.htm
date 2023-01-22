@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-end">
+    <div id="ceremonia" class="">
+        <h1 style="font-family: 'Tangerine', cursive; letter-spacing: 3px;font-weight: 400;" class="display-1">{{ secciontres.dataSeccion.titulo_ceremonia }}</h1>
+        <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 3px;font-weight: 400;" class="display-1">{{ secciontres.dataSeccion.subtitulo_ceremonia }}</h2>
+        <p style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1">{{ secciontres.dataSeccion.donde_ceremonia}}</p>
+        <p style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1">{{ secciontres.dataSeccion.cuando_ceremonia}}</p>
+        <div class="row align-items-end">
+            <img src="{{secciontres.dataSeccion.imagen_ceremonia}}" alt="{{secciontres.dataSeccion.imagen_ceremonia}}">
+            <a target="_blank" style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1" href="{{ secciontres.dataSeccion.link_googlemaps_ceremonia }}">Llevame</a>
+        </div>
+    </div>
+    <div id="recepcion" class="">
+        <h1 style="font-family: 'Tangerine', cursive; letter-spacing: 3px;font-weight: 400;" class="display-1">{{ secciontres.dataSeccion.titulo_recepcion }}</h1>
+        <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 3px;font-weight: 400;" class="display-1">{{ secciontres.dataSeccion.subtitulo_recepcion }}</h2>
+        <p style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1">{{ secciontres.dataSeccion.donde_recepcion}}</p>
+        <p style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1">{{ secciontres.dataSeccion.cuando_recepcion}}</p>
+        <div class="row align-items-end">
+            <img src="{{secciontres.dataSeccion.imagen_recepcion}}" alt="{{secciontres.dataSeccion.imagen_recepcion}}">
+            <a target="_blank" style="font-family: 'Tangerine','cursive'; letter-spacing: 3px; font-weight: bold;" class="display-1" href="{{ secciontres.dataSeccion.link_googlemaps_recepcion }}">Llevame</a>
+        </div>
+    </div>
+</div>

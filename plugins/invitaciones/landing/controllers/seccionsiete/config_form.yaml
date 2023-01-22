@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Seccion Siete
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/seccionsiete/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\SeccionSiete
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/seccionsiete
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/seccionsiete/update/:id
+    redirectClose: invitaciones/landing/seccionsiete
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/seccionsiete
+    redirectClose: invitaciones/landing/seccionsiete
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Seccion Ocho
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/seccionocho/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\SeccionOcho
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/seccionocho
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/seccionocho/update/:id
+    redirectClose: invitaciones/landing/seccionocho
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/seccionocho
+    redirectClose: invitaciones/landing/seccionocho
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
