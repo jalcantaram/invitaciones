@@ -12,8 +12,16 @@ class CreateSeccionUnosTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('titulo');
-            $table->string('sub_titulo');
-            $table->text('texto_complementario');
+            $table->string('color_titulo');
+            $table->string('sub_titulo')->nullable();
+            $table->string('color_sub_titulo')->nullable();
+            $table->text('texto_complementario')->nullable();
+            $table->string('color_texto_complementario')->nullable();
+            $table->string('nombre_novio');
+            $table->string('color_nombre_novio');
+            $table->string('nombre_novia');
+            $table->string('color_nombre_novia');
+            $table->string('fecha');
             $table->timestamps();
         });
     }

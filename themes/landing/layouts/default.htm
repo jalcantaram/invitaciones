@@ -22,10 +22,10 @@ description = "Default layout"
     ]|theme }}" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation" id="top-nav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation animated" id="top-nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 4px;">{{ seccionuno.dataSeccion.titulo }}</h2>
+                <h2 style="font-family: 'Great Vibes', cursive; letter-spacing: 4px;">{{ seccionuno.dataSeccion.nombre_novio }} & {{ seccionuno.dataSeccion.nombre_novia }}</h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuItems" aria-controls="menuItems" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,53 +60,16 @@ description = "Default layout"
         </div>
     </nav>
     
-    <section class="hero-area bg-1">
+    <section class="hero-area {% if not seccionuno.dataSeccion.background %} bg-1 {% endif %}" {% if seccionuno.dataSeccion.background %} style="background-image: url({{seccionuno.dataSeccion.background.path}});background-repeat: no-repeat;background-position: center;background-size: cover;" {% endif %}>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">
-                        {% component "seccionuno" %}
-                    </div>
-                </div>
-                <!--
-                    <div class="col-md-5 wow zoomIn">
-                        <div class="block">
-                            <div class="counter text-center">
-                                <ul id="countdown_dashboard">
-                                    <li>
-                                        <div class="dash days_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash hours_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Hours</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash minutes_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Minutes</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash seconds_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Seconds</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="intro-circulo">
+                            {% component "seccionuno" %}
                         </div>
                     </div>
-                -->
+                </div>
             </div><!-- .row close -->
         </div><!-- .container close -->
     </section><!-- header close -->
@@ -120,45 +83,6 @@ description = "Default layout"
                         {% component "secciondos" %}
                     </div>
                 </div>
-                <!--
-                    <div class="col-md-5 wow zoomIn">
-                        <div class="block">
-                            <div class="counter text-center">
-                                <ul id="countdown_dashboard">
-                                    <li>
-                                        <div class="dash days_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash hours_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Hours</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash minutes_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Minutes</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash seconds_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Seconds</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                -->
             </div><!-- .row close -->
         </div><!-- .container close -->
     </section><!-- header close -->

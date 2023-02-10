@@ -6,19 +6,80 @@ fields:
     titulo:
         label: Titulo
         placeholder: Titulo
-        description: Nombre del novio y la novia
+        description: Titulo
         required: true
         type: text
+        span: left
+    color_titulo:
+        label: Color de Titulo
+        placeholder: Color de Titulo
+        required: true
+        type: colorpicker
+        span: right
     sub_titulo:
         label: Sub Titulo
         placeholder: Sub Titulo
-        description: Ej. NUESTRA BODA
+        description: Sub Titulo
         required: true
         type: text
-    texto_complementario:
-        label: Texto complementario
-        placeholder: Texto complementario
-        description: Texto complementario
-        required: false
-        type: textarea
-        size: small
+        span: left
+    color_sub_titulo:
+        label: Color de SubTitulo
+        placeholder: Color de SubTitulo
+        required: true
+        type: colorpicker
+        span: right
+    nombre_novio:
+        label: Titulo del nombre novio
+        placeholder: Titulo del nombre novio
+        description: Titulo del nombre novio
+        required: true
+        type: text
+        span: left
+    color_nombre_novio:
+        label: Color del titulo (nombre novio)
+        placeholder: Color del titulo (nombre novio)
+        description: Color del titulo (nombre novio)
+        required: true
+        type: colorpicker
+        span: right
+    nombre_novia:
+        label: Titulo del nombre novia
+        placeholder: Titulo del nombre novia
+        description: Titulo del nombre novia
+        required: true
+        type: text
+        span: left
+    color_nombre_novia:
+        label: Color del titulo (nombre novia)
+        placeholder: Color del titulo (nombre novia)
+        description: Color del titulo (nombre novia)
+        required: true
+        type: colorpicker
+        span: right
+    fecha:
+        label: Fecha boda
+        placeholder: Fecha boda
+        description: Fecha boda
+        required: true
+        type: text
+        span: left
+    background:
+        label: Imagen de fondo
+        placeholder: Imagen de fondo
+        required: true
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 260
+        imageWidth: 260
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: full

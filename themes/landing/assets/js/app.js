@@ -8,13 +8,13 @@
         /*-------------------------------
         OCTOBERCMS FLASH MESSAGE HANDLING
         ---------------------------------*/
-        $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll > 200) {
-            $(".navigation").addClass("animated");
-        } else {
-            $(".navigation").removeClass("animated");
-        }});
+        // $(window).scroll(function() {
+        // var scroll = $(window).scrollTop();
+        // if (scroll > 200) {
+        //     $(".navigation").addClass("animated");
+        // } else {
+        //     $(".navigation").removeClass("animated");
+        // }});
         /*
         $(document).on('ajaxSetup', function(event, context) {
             // Enable AJAX handling of Flash messages on all AJAX requests
