@@ -2,87 +2,122 @@
 #  Form Field Definitions
 # ===================================
 fields:
-    titulo_ceremonia:
-        label: Título de la sección de la ceremonia 
-        placeholder: Ceremonia
-        description: Ej. Ceremonia
-        required: true
-        type: text
     subtitulo_ceremonia:
         label: Nombre del lugar donde será la ceremonia
         placeholder: Nombre del lugar donde será la ceremonia
         description: Ej. "Finca San Javier"
         required: true
         type: text
-    donde_ceremonia:
-        label: Dirección del lugar donde será la ceremonia
-        placeholder: Dirección del lugar donde será la ceremonia
-        description: Dirección del lugar donde será la ceremonia
-        required: true
-        type: text
-    cuando_ceremonia: 
-        label: Día y hora de la ceremonia
-        placeholder: Día y hora de la ceremonia
-        description: Día y hora de la ceremonia
-        required: true
-        type: text
-    imagen_ceremonia: 
-        label: Imagen del lugar donde será la ceremonia
-        placeholder: Imagen del lugar donde será la ceremonia
-        description: Imagen del lugar donde será la ceremonia
-        required: false
-        type: text
-    link_googlemaps_ceremonia: 
-        label: Link de google maps para saber llegar a la ceremonia
-        placeholder: Link de google maps para saber llegar a la ceremonia
-        description: Link de google maps para saber llegar a la ceremonia
-        required: true
-        type: text
-    titulo_recepcion:
-        label: Título de la sección de la recepción 
-        placeholder: Título de la sección de la recepción 
-        description: Ej. Rcepción o Fiesta
-        required: true
-        type: text
+        span: left
     subtitulo_recepcion:
         label: Nombre del lugar donde será la recepción
         placeholder: Nombre del lugar donde será la recepción
         description: Ej. "Finca San Javier"
         required: true
         type: text
+        span: right
+    donde_ceremonia:
+        label: Dirección del lugar donde será la ceremonia
+        placeholder: Dirección del lugar donde será la ceremonia
+        description: Dirección del lugar donde será la ceremonia
+        required: true
+        type: text
+        span: left
     donde_recepcion:
         label: Dirección del lugar donde será la recepción
         placeholder: Dirección del lugar donde será la recepción
         description: Dirección del lugar donde será la recepción
         required: true
         type: text
-    cuando_recepcion:
-        label: Día y hora de la recepción
-        placeholder: Día y hora de la recepción
-        description: Día y hora de la recepción
+        span: right
+    hora_ceremonia: 
+        label: Hora de la ceremonia
+        placeholder: Hora de la ceremonia
+        description: Hora de la ceremonia
+        required: true
+        type: datepicker
+        mode: time
+        span: left
+    hora_recepcion:
+        label: Hora de la recepción
+        placeholder: Hora de la recepción
+        description: Hora de la recepción
+        required: true
+        type: datepicker
+        mode: time
+        span: right
+    link_googlemaps_ceremonia: 
+        label: Link de google maps para saber llegar a la ceremonia
+        placeholder: Link de google maps para saber llegar a la ceremonia
+        description: Link de google maps para saber llegar a la ceremonia
         required: true
         type: text
-    imagen_recepcion:
-        label: Imagen del lugar donde será la recepción
-        placeholder: Imagen del lugar donde será la recepción
-        description: Imagen del lugar donde será la recepción
-        required: true
-        type: text
+        span: left
     link_googlemaps_recepcion:
         label: Link de google maps para saber llegar a la recepción
         placeholder: Link de google maps para saber llegar a la recepción
         description: Link de google maps para saber llegar a la recepción
         required: true
         type: text
+        span: right
+    foto_novia:
+        label: Foto de la novia
+        placeholder: Foto de la novia
+        description: Foto de la novia
+        required: true
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 260
+        imageWidth: 260
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: left
+    foto_novio:
+        label: Foto del novio
+        placeholder: Foto del novio
+        description: Foto del novio
+        required: true
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 260
+        imageWidth: 260
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: right
     text_color:
         label: Color de texto
         placeholder: Color de texto
         description: Color del texto de la frase
         required: false
         type: text
+        span: right
     background_color:
         label: Color de fondo
         placeholder: Color de fondo
         description: Color de fondo
         required: false
         type: text
+        span: left
+    fecha_celebracion:
+        label: Fecha de la celebración
+        placeholder: Fecha de la celebración
+        description: Fecha de la celebración
+        required: true
+        type: datepicker
+        span: full

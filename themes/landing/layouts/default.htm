@@ -15,7 +15,7 @@ description = "Default layout"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Griselda Mota Gándara y Xavier Rosas Velazquez</title>
+    <title>Boda de {{ seccionuno.dataSeccion.titulo }}</title>
     <link href="{{ [
         'assets/less/theme.scss',
         'assets/css/animate.min.css'
@@ -74,70 +74,24 @@ description = "Default layout"
         </div><!-- .container close -->
     </section><!-- header close -->
 
-
-    <section class="hero-area bg-1" id="dondeycuando" style="background-color: {{secciondos.dataSeccion.background_color}};">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="text-center">
-                        {% component "secciondos" %}
-                    </div>
-                </div>
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- header close -->
-
-
-    <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ secciontres.dataSeccion.background_color}};">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="text-center" style="color:{{ secciontres.dataSeccion.text_color}}">
-                       {% component 'secciontres' %}
-                    </div>
-                </div>
-                <!--
-                    <div class="col-md-5 wow zoomIn">
-                        <div class="block">
-                            <div class="counter text-center">
-                                <ul id="countdown_dashboard">
-                                    <li>
-                                        <div class="dash days_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash hours_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Hours</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash minutes_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Minutes</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash seconds_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Seconds</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+    {% if secciondos.dataSeccion %}
+        <section class="hero-area bg-1" id="frase" style="background-color: {{secciondos.dataSeccion.background_color}};">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            {% component "secciondos" %}
                         </div>
                     </div>
-                -->
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- header close -->
+                </div><!-- .row close -->
+            </div><!-- .container close -->
+        </section><!-- header close -->
+    {% endif %}
+
+    <div id="dondeycuando" class="w-100">
+        {% component 'secciontres' %}
+    </div>
+    
 
     
     <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccioncuatro.dataSeccion.background_color}};">
@@ -452,5 +406,8 @@ description = "Default layout"
         'assets/js/bootstrap.bundle.min.js',
         'assets/js/app.js'
     ]|theme }}"></script>
+    <script>
+        contador("{{secciontres.dataSeccion.fecha_celebracion}}");
+    </script>
 </body>
 </html>

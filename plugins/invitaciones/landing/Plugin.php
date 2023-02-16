@@ -123,7 +123,7 @@ class Plugin extends PluginBase
                         'permissions' => ['invitaciones.landing.*'],
                     ],
                     'seccion_tres' => [
-                        'label' => 'Sección tres',
+                        'label' => 'Sección tres (Donde y Cuando)',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/secciontres'),
                         'permissions' => ['invitaciones.landing.*'],

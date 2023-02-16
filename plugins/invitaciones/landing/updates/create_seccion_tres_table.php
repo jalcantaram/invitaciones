@@ -11,20 +11,19 @@ class CreateSeccionTresTable extends Migration
         Schema::create('invitaciones_landing_seccion_tres', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('titulo_ceremonia');
-            $table->string('subtitulo_ceremonia');
-            $table->string('donde_ceremonia');
-            $table->string('cuando_ceremonia');
-            $table->string('imagen_ceremonia');
-            $table->string('titulo_recepcion');
-            $table->string('subtitulo_recepcion');
-            $table->string('donde_recepcion');
-            $table->string('cuando_recepcion');
-            $table->string('imagen_recepcion');
-            $table->string('text_color');
-            $table->string('background_color');
-            $table->string('link_googlemaps_ceremonia');
-            $table->string('link_googlemaps_recepcion');
+            $table->string('subtitulo_ceremonia')->nullable();
+            $table->string('donde_ceremonia')->nullable();
+            $table->string('cuando_ceremonia')->nullable();
+            $table->string('hora_ceremonia')->nullable();
+            $table->string('link_googlemaps_ceremonia')->nullable();
+            $table->string('subtitulo_recepcion')->nullable();
+            $table->string('donde_recepcion')->nullable();
+            $table->string('cuando_recepcion')->nullable();
+            $table->string('hora_recepcion')->nullable();
+            $table->string('link_googlemaps_recepcion')->nullable();
+            $table->string('text_color')->nullable();
+            $table->string('background_color')->nullable();
+            $table->string('fecha_celebracion')->nullable();
             $table->timestamps();
         });
     }

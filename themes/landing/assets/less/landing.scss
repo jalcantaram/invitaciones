@@ -1,3 +1,13 @@
+:root {
+    --fuente-textos: 'Poiret One';
+    --fuente-titulos: 'Parisienne';
+    --contador-texto-px: 24px;
+    --contador-faltan:"Faltan";
+    --contador-dias:"Días";
+    --contador-hrs:"Hrs";
+    --contador-mins:"Mins";
+    --contador-segs:"Segs";
+}
 html {
     scroll-behavior: smooth;
 }
@@ -138,4 +148,176 @@ html {
     margin-top: 34px;
     font-family: 'Poiret One';
     font-style: normal;
+}
+.foto-novios{
+    width: 290px;
+    height: 290px;
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.foto-novio{
+    background-size: cover !important;
+    float: right;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.foto-novia{
+    background-size: cover !important;
+    float: left;
+    left: 0;
+}
+.event-container {
+    display: flex;
+    margin-top: 46px;
+}
+@media (max-width: 1424px){
+    .invitacion-section .container {
+        width: 840px;
+    }
+}
+.invitacion-section {
+    padding: 100px 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+.invitacion-section .container .rlan{
+    position: relative;
+}
+.invitacion-section .container .rlan:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.event-wrap {
+    width: 50%;
+    flex-grow: 1;
+    padding: 0 42px;
+    text-align: center;
+}
+.ceremonia-wrap {
+    border-right: 1px solid #e8e8e8;
+}
+.event-wrap p {
+    line-height: 26px;
+}
+.event-btn {
+    margin-top: 26px;
+}
+.event-hra {
+    border: 1px solid rgb(179, 148, 127);
+    color: rgb(179, 148, 127);;
+    border-radius: 30px;
+    width: 120px;
+    font-size: 20px;
+    padding: 5px;
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: middle;
+    font-family: 'Poiret One';
+
+}
+.btn-grl, .btn-grl:hover {
+    background: rgb(179, 148, 127);
+    transition: all .3s;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 4px;
+    transition: .25s ease-in all;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Poiret One';
+    font-style: normal;
+}
+.btn-grl:hover:after {
+    box-shadow: 0 6px 30px 10px rgba(179, 148, 127, 0.25);
+}
+.btn-grl:after {
+    background-color: rgb(179, 148, 127);
+    border-radius: 65px;
+    transition: all .3s;
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 0;
+}
+.event-wrap h3 {
+    font-family: 'Parisienne';
+    font-style: italic;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+.event-wrap p {
+    font-family: 'Poiret One';
+    line-height: 26px;
+}
+.contador-container {
+    text-align: center;
+    margin: 94px auto 38px;
+    width: 430px;
+    border: 1px solid rgb(179, 148, 127);
+    padding: 20px 0 40px;
+    position: relative;
+    border-radius: 4px;
+    white-space: nowrap
+}
+
+.contador-container:before {
+    content: var(--contador-faltan);
+    position: absolute;
+    top: -23px;
+    background: #fff;
+    width: 160px;
+    display: block;
+    font-size: 32px;
+    left: 50%;
+    margin-left: -80px;
+    font-family: var(--fuente-titulos);
+}
+
+.contador-container>div {
+    text-align: center;
+    font-size: 42px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 16px;
+    color: rgb(179, 148, 127);
+    font-family: var(--fuente-textos);
+}
+
+.contador-container>div:before {
+    content: var(--contador-dias);
+    position: absolute;
+    font-size: var(--contador-texto-px);
+    bottom: -20px;
+    text-align: center;
+    width: 100%
+}
+
+.contador-container>div:nth-child(2):before {
+    content: var(--contador-hrs)
+}
+
+.contador-container>div:nth-child(3):before {
+    content: var(--contador-mins)
+}
+
+.contador-container>div:nth-child(4):before {
+    content: var(--contador-segs)
+}
+
+.contador-container>div:nth-child(4):after {
+    display: none
 }

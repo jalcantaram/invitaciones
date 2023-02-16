@@ -6,10 +6,10 @@ columns:
     id:
         label: ID
         searchable: true
-    titulo_ceremonia:
-        label : TITULO CEREMONIA
+    subtitulo_ceremonia:
+        label : SUBTITULO CEREMONIA
         searchable: true
-    titulo_recepcion:
-        label: TITULO RECEPCION
+    subtitulo_recepcion:
+        label: SUBTITULO RECEPCION
         searchable: true
 

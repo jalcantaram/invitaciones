@@ -27,7 +27,21 @@ class SeccionTres extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'subtitulo_ceremonia' => 'required',
+        'donde_ceremonia' => 'required',
+        'cuando_ceremonia' => 'nullable',
+        'hora_ceremonia' => 'required',
+        'link_googlemaps_ceremonia' => 'required',
+        'subtitulo_recepcion' => 'required',
+        'donde_recepcion' => 'required',
+        'cuando_recepcion' => 'nullable',
+        'hora_recepcion' => 'required',
+        'link_googlemaps_recepcion' => 'required',
+        'text_color' => 'nullable',
+        'background_color' => 'nullable',
+        'fecha_celebracion' => 'required',
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -69,6 +83,11 @@ class SeccionTres extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'foto_novio' => 'System\Models\File',
+        'foto_novia' => 'System\Models\File',
+        'imagen_ceremonia' => 'System\Models\File',
+        'imagen_recepcion' => 'System\Models\File',
+    ];
     public $attachMany = [];
 }
