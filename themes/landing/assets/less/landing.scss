@@ -394,6 +394,10 @@ html {
     font-family: var(--fuente-textos);
     font-style: normal;
     appearance: none;
+    &:focus-visible{
+        outline: 3px solid rgb(179, 148, 127);
+        box-shadow: 5px 5px 10px rgb(179, 148, 127);
+    }
 }
 
 .form-reservacion .row {
@@ -413,6 +417,10 @@ html {
     appearance: none;
     font-family: var(--fuente-textos);
     font-style: normal;
+    &:focus-visible{
+        outline: 3px solid rgb(179, 148, 127);
+        box-shadow: 5px 5px 10px rgb(179, 148, 127);
+    }
 }
 
 .form-reservacion .btn-grl {
