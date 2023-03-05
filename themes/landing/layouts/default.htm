@@ -9,6 +9,16 @@ description = "Default layout"
 [seccionocho]
 [seccionnueve]
 ==
+<?
+function onStart(){
+    $this['has_audio'] = false;
+    if(file_exists(storage_path('app').'/media/i-say-a-little-prayer-for-you-instrumental-version128-kbps.mp3')){
+        $this['has_audio'] = true;
+        $this['url_audio'] = \Url::to(\System\Classes\MediaLibrary::url('i-say-a-little-prayer-for-you-instrumental-version128-kbps.mp3'));
+    }
+}
+?>
+==
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,58 +102,15 @@ description = "Default layout"
         {% component 'secciontres' %}
     </div>
     
-
-    
-    <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccioncuatro.dataSeccion.background_color}};">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="text-center" style="color:{{ seccioncuatro.dataSeccion.text_color}}">
-                       {% component 'seccioncuatro' %}
-                    </div>
-                </div>
-                <!--
-                    <div class="col-md-5 wow zoomIn">
-                        <div class="block">
-                            <div class="counter text-center">
-                                <ul id="countdown_dashboard">
-                                    <li>
-                                        <div class="dash days_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Days</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash hours_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Hours</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash minutes_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Minutes</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dash seconds_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <span class="dash_title">Seconds</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                -->
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- header close -->
+    <audio id="divAudio" controls autoplay loop>
+        <source src="{{ url_audio}}" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+      <section id="reservacion" class="reservacion-section"> 
+        <form id="deseos" class="form-reservacion">
+            {% component 'seccioncuatro' %}
+        </form>
+      </section>
 
     <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccioncinco.dataSeccion.background_color}};">
         <div class="container">
@@ -409,5 +376,24 @@ description = "Default layout"
     <script>
         contador("{{secciontres.dataSeccion.fecha_celebracion}}");
     </script>
+    <script>
+        var vAudio = document.getElementById("divAudio");
+        var hasInit = false;
+        playMusic(vAudio,hasInit);
+        function playMusic(vAudio,hasInit)
+        {
+            if(!hasInit)
+            {
+               console.log(vAudio);
+               vAudio.paused = false;
+               hasInit = true;
+               vAudio.autoplay=true;
+               vAudio.load();
+               vAudio.addEventListener('load',function(){
+                vAudio.play();
+               },true);
+           }
+        }
+     </script>
 </body>
 </html>
