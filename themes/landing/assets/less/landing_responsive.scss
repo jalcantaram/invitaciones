@@ -1,0 +1,41 @@
+@media (min-length: 992px) and (max-width: 1424px){
+    .invitacion-section .container {
+        width: 840px;
+    }
+}
+@media (max-width: 768px){
+    .foto-novios{
+        width: 200px;
+        height: 200px;
+    }
+    .event-hra {
+        margin-bottom: 12px;
+    }
+    .contador-container {
+        width: 350px !important;
+    }
+}
+@media (max-width: 420px){
+    .foto-novios{
+        width: 180px;
+        height: 180px;
+    }
+    .contador-container {
+        width: 320px !important;
+    }
+    .event-hra {
+        width: 90px;
+        font-size: 15px;
+        padding: 5px;
+    }
+    .btn-grl, .btn-grl:hover {
+        margin: 0px;
+        width: 90px;
+        display: block;
+        padding: 5px 0px;
+
+    }
+    .contador-container>div {
+        font-size: 36px;
+    }
+}
