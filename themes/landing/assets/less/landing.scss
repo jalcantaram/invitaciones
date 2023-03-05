@@ -160,27 +160,16 @@ html {
 }
 .foto-novio{
     background-size: cover !important;
-    float: right;
-    right: 0;
-    top: 0;
-    position: absolute;
 }
 .foto-novia{
     background-size: cover !important;
-    float: left;
-    left: 0;
 }
 .event-container {
     display: flex;
     margin-top: 46px;
 }
-@media (max-width: 1424px){
-    .invitacion-section .container {
-        width: 840px;
-    }
-}
 .invitacion-section {
-    padding: 100px 0 !important;
+    padding: 50px 0 !important;
     overflow: hidden !important;
     position: relative !important;
 }
@@ -211,9 +200,9 @@ html {
     border: 1px solid rgb(179, 148, 127);
     color: rgb(179, 148, 127);;
     border-radius: 30px;
-    width: 120px;
+    width: 110px;
     font-size: 20px;
-    padding: 5px;
+    padding: 3px;
     display: inline-block;
     font-weight: 600;
     vertical-align: middle;
@@ -320,4 +309,45 @@ html {
 
 .contador-container>div:nth-child(4):after {
     display: none
+}
+@media (min-length: 992px) and (max-width: 1424px){
+    .invitacion-section .container {
+        width: 840px;
+    }
+}
+@media (max-width: 768px){
+    .foto-novios{
+        width: 200px;
+        height: 200px;
+    }
+    .event-hra {
+        margin-bottom: 12px;
+    }
+    .contador-container {
+        width: 350px !important;
+    }
+}
+@media (max-width: 420px){
+    .foto-novios{
+        width: 180px;
+        height: 180px;
+    }
+    .contador-container {
+        width: 320px !important;
+    }
+    .event-hra {
+        width: 90px;
+        font-size: 15px;
+        padding: 5px;
+    }
+    .btn-grl, .btn-grl:hover {
+        margin: 0px;
+        width: 90px;
+        display: block;
+        padding: 5px 0px;
+
+    }
+    .contador-container>div {
+        font-size: 36px;
+    }
 }
