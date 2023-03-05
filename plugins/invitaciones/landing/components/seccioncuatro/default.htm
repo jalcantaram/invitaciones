@@ -25,26 +25,23 @@
         <div class="col-md-6 col-6 inputs-cols-left"> 
             <input type="email" placeholder="· Email" class="usr-correo" name="user_email">
         </div>
-        <div class="col-md-6 col-6 inputs-cols-right">
-            <select name="" required="" id="invitados" class="num-invitados">
-                <option value="" disabled="" selected="">· Invitados confirmados</option>
-                <option value="0">No asistiré</option>
-                <option value="1">1 invitado(s)</option>
-            </select>
+        <div class="col-md-6 col-6 inputs-cols-right"> 
+            <input type="tel" placeholder="· Teléfono" class="usr-telefono" pattern="[5]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" name="user_telefono" maxlength="10" minlength="10">
         </div>
     </div>
     <div class="row col-12">
         <div class="col-md-6 col-6 inputs-cols-left">
-            <input type="text" id="alergia" placeholder="¿Alérgico a algun alimento?">
+            <select name="" required="" id="proteina" class="proteina">
+                <option value="" disabled="" selected="">· Preferencia de proteina</option>
+                <option value="0">Res (Carne)</option>
+                <option value="1">Ave (Pollo)</option>
+            </select>
         </div>
         <div class="col-md-6 col-6 inputs-cols-right">
-            <select name="" required="" id="alcohol">
-                <option value="" disabled="" selected="">· Preferencia de bebidas</option>
-                <option value="Tequila">Tequila</option>
-                <option value="Whiskey">Whiskey</option>
-                <option value="Ron">Ron</option>
-                <option value="Mezcal">Mezcal</option>
-                <option value="Vino">Vino</option>
+            <select name="" required="" id="proteina" class="proteina">
+                <option value="" disabled="" selected="">· Asistencia</option>
+                <option value="0">Sí, asistiré</option>
+                <option value="1">No asistiré</option>
             </select>
         </div>
     </div>
