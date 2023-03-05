@@ -102,15 +102,11 @@ function onStart(){
         {% component 'secciontres' %}
     </div>
     
-    <audio id="divAudio" controls autoplay loop>
-        <source src="{{ url_audio}}" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-      <section id="reservacion" class="reservacion-section"> 
+    <section id="reservacion" class="reservacion-section"> 
         <form id="deseos" class="form-reservacion">
             {% component 'seccioncuatro' %}
         </form>
-      </section>
+    </section>
 
     <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccioncinco.dataSeccion.background_color}};">
         <div class="container">
@@ -366,6 +362,13 @@ function onStart(){
             </div><!-- .row close -->
         </div><!-- .container close -->
     </section><!-- header close -->
+
+
+    <audio id="divAudio" controls autoplay loop>
+        <source src="{{ url_audio}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="{{ [
         '@jquery',
         '@framework',
@@ -376,7 +379,7 @@ function onStart(){
     <script>
         contador("{{secciontres.dataSeccion.fecha_celebracion}}");
     </script>
-    <script>
+    <!-- <script>
         var vAudio = document.getElementById("divAudio");
         var hasInit = false;
         playMusic(vAudio,hasInit);
@@ -394,6 +397,6 @@ function onStart(){
                },true);
            }
         }
-     </script>
+     </script> -->
 </body>
 </html>
