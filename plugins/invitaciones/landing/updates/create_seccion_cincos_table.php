@@ -11,8 +11,7 @@ class CreateSeccionCincosTable extends Migration
         Schema::create('invitaciones_landing_seccion_cincos', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('background_color');
-            $table->string('text_color');
+            $table->string('titulo')->nullable();
             $table->timestamps();
         });
     }

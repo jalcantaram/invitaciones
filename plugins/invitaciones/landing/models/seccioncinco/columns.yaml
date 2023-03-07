@@ -3,6 +3,17 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    thumb:
+        label: 'imagen previa'
+        type: img_carousel_thumb
+        width: 230px
+        searchable: false
+        sortable: false
+    titulo:
+        label: 'titulo'
+        type: text
+        sortable: true
+    created_at:
+        label: 'fecha de creacion'
+        type: datetime
+        sortable: true

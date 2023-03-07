@@ -56,10 +56,10 @@ class Plugin extends PluginBase
             'Invitaciones\Landing\Components\SeccionTres' => 'secciontres',
             'Invitaciones\Landing\Components\SeccionCuatro' => 'seccioncuatro',
             'Invitaciones\Landing\Components\SeccionCinco' => 'seccioncinco',
-            'Invitaciones\Landing\Components\SeccionSeis' => 'seccionseis',
-            'Invitaciones\Landing\Components\SeccionSiete' => 'seccionsiete',
-            'Invitaciones\Landing\Components\SeccionOcho' => 'seccionocho',
-            'Invitaciones\Landing\Components\SeccionNueve' => 'seccionnueve',
+            // 'Invitaciones\Landing\Components\SeccionSeis' => 'seccionseis',
+            // 'Invitaciones\Landing\Components\SeccionSiete' => 'seccionsiete',
+            // 'Invitaciones\Landing\Components\SeccionOcho' => 'seccionocho',
+            // 'Invitaciones\Landing\Components\SeccionNueve' => 'seccionnueve',
 
 
         ];
@@ -129,43 +129,52 @@ class Plugin extends PluginBase
                         'permissions' => ['invitaciones.landing.*'],
                     ],
                     'seccion_cuatro' => [
-                        'label' => 'Sección cuatro',
+                        'label' => 'Sección cuatro (Formulario de confirmación)',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/seccioncuatro'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
                     'seccion_cinco' => [
-                        'label' => 'Sección cinco',
-                        'icon' => 'icon-upload',
+                        'label' => 'Sección cinco (Fotos - Slider)',
+                        'icon' => 'icon-picture-o',
                         'url' => Backend::url('invitaciones/landing/seccioncinco'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
-                    'seccion_seis' => [
-                        'label' => 'Sección seis',
-                        'icon' => 'icon-upload',
-                        'url' => Backend::url('invitaciones/landing/seccionseis'),
-                        'permissions' => ['invitaciones.landing.*'],
-                    ],
-                    'seccion_siete' => [
-                        'label' => 'Sección siete',
-                        'icon' => 'icon-upload',
-                        'url' => Backend::url('invitaciones/landing/seccionsiete'),
-                        'permissions' => ['invitaciones.landing.*'],
-                    ],
-                    'seccion_ocho' => [
-                        'label' => 'Sección ocho',
-                        'icon' => 'icon-upload',
-                        'url' => Backend::url('invitaciones/landing/seccionocho'),
-                        'permissions' => ['invitaciones.landing.*'],
-                    ],
-                    'seccion_nueve' => [
-                        'label' => 'Sección nueve',
-                        'icon' => 'icon-upload',
-                        'url' => Backend::url('invitaciones/landing/seccionnueve'),
-                        'permissions' => ['invitaciones.landing.*'],
-                    ],
+                    // 'seccion_seis' => [
+                    //     'label' => 'Sección seis',
+                    //     'icon' => 'icon-upload',
+                    //     'url' => Backend::url('invitaciones/landing/seccionseis'),
+                    //     'permissions' => ['invitaciones.landing.*'],
+                    // ],
+                    // 'seccion_siete' => [
+                    //     'label' => 'Sección siete',
+                    //     'icon' => 'icon-upload',
+                    //     'url' => Backend::url('invitaciones/landing/seccionsiete'),
+                    //     'permissions' => ['invitaciones.landing.*'],
+                    // ],
+                    // 'seccion_ocho' => [
+                    //     'label' => 'Sección ocho',
+                    //     'icon' => 'icon-upload',
+                    //     'url' => Backend::url('invitaciones/landing/seccionocho'),
+                    //     'permissions' => ['invitaciones.landing.*'],
+                    // ],
+                    // 'seccion_nueve' => [
+                    //     'label' => 'Sección nueve',
+                    //     'icon' => 'icon-upload',
+                    //     'url' => Backend::url('invitaciones/landing/seccionnueve'),
+                    //     'permissions' => ['invitaciones.landing.*'],
+                    // ],
                 ],
             ],
+        ];
+    }
+
+    public function registerListColumnTypes()
+    {
+        return [
+            'img_carousel_thumb' => function ($src) {
+                return "<img src=\"$src\" alt=\"\">";
+            },
         ];
     }
 }

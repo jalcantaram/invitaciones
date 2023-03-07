@@ -3,16 +3,18 @@
 # ===================================
 
 fields:
-    text_color:
-        label: Color de texto
-        placeholder: Color de texto
-        description: Color del texto de la frase
-        required: false
+    image:
+        label: 'Imagen SLIDER'
+        mode: image
+        imageWidth: 300
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        required: true
+        type: fileupload
+    titulo:
+        label: 'Titulo de la imagen'
+        span: full
         type: text
-    background_color:
-        label: Color de fondo
-        placeholder: Color de fondo
-        description: Color de fondo
-        required: false
-        type: text
-    
