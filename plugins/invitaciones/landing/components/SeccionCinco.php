@@ -15,7 +15,7 @@ class SeccionCinco extends ComponentBase
 
     public function dataSeccion()
     {
-        $seccioncinco = SeccionCincoModel::first();
-        return $seccioncinco;
+       $seccioncinco = SeccionCincoModel::all();
+       return $seccioncinco;
     }
 }

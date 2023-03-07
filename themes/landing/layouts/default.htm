@@ -4,10 +4,7 @@ description = "Default layout"
 [secciontres]
 [seccioncuatro]
 [seccioncinco]
-[seccionseis]
-[seccionsiete]
-[seccionocho]
-[seccionnueve]
+
 ==
 <?
 function onStart(){
@@ -30,6 +27,7 @@ function onStart(){
             'assets/less/theme.scss',
             'assets/css/animate.min.css'
         ]|theme }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation animated" id="top-nav">
@@ -45,9 +43,9 @@ function onStart(){
                         <li class="nav-item">
                             <a class="nav-link" href="#dondeycuando">Dónde & Cuándo</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#hospedaje">Hospedaje</a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#dresscode">Código de vestimenta</a>
                         </li> -->
@@ -70,6 +68,7 @@ function onStart(){
             </div>
         </nav>
         
+        <!-- SECCIOUNO -->
         <section class="hero-area {% if not seccionuno.dataSeccion.background %} bg-1 {% endif %}" {% if seccionuno.dataSeccion.background %} style="background-image: url({{seccionuno.dataSeccion.background.path}});background-repeat: no-repeat;background-position: center;background-size: cover;" {% endif %}>
             <div class="container">
                 <div class="row">
@@ -84,6 +83,7 @@ function onStart(){
             </div><!-- .container close -->
         </section><!-- header close -->
 
+        <!-- SECCIODOS -->
         {% if secciondos.dataSeccion %}
             <section class="hero-area bg-1" id="frase" style="background-color: {{secciondos.dataSeccion.background_color}};">
                 <div class="container">
@@ -98,67 +98,24 @@ function onStart(){
             </section><!-- header close -->
         {% endif %}
 
+        <!-- SECCIONTRES -->
         <div id="dondeycuando" class="w-100">
             {% component 'secciontres' %}
         </div>
         
-        <section id="reservacion" class="reservacion-section"> 
+        <!-- SECCIONCUATRO -->
+        <section id="asistencia" class="reservacion-section"> 
             <form id="deseos" class="form-reservacion">
                 {% component 'seccioncuatro' %}
             </form>
         </section>
 
-        <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccioncinco.dataSeccion.background_color}};">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="text-center" style="color:{{ seccioncinco.dataSeccion.text_color}}">
-                        {% component 'seccioncinco' %}
-                        </div>
-                    </div>
-                    <!--
-                        <div class="col-md-5 wow zoomIn">
-                            <div class="block">
-                                <div class="counter text-center">
-                                    <ul id="countdown_dashboard">
-                                        <li>
-                                            <div class="dash days_dash">
-                                                <div class="digit">0</div>
-                                                <div class="digit">0</div>
-                                                <div class="digit">0</div>
-                                                <span class="dash_title">Days</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dash hours_dash">
-                                                <div class="digit">0</div>
-                                                <div class="digit">0</div>
-                                                <span class="dash_title">Hours</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dash minutes_dash">
-                                                <div class="digit">0</div>
-                                                <div class="digit">0</div>
-                                                <span class="dash_title">Minutes</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="dash seconds_dash">
-                                                <div class="digit">0</div>
-                                                <div class="digit">0</div>
-                                                <span class="dash_title">Seconds</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    -->
-                </div><!-- .row close -->
-            </div><!-- .container close -->
+        <!-- SECCIONCINCO -->
+        <section class="" id="fotos" style="padding: 64px 0;background: #f9f4ef">
+            {% component 'seccioncinco' %}
         </section><!-- header close -->
 
+        {#
         <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccionseis.dataSeccion.background_color}};">
             <div class="container">
                 <div class="row">
@@ -362,7 +319,7 @@ function onStart(){
                 </div><!-- .row close -->
             </div><!-- .container close -->
         </section><!-- header close -->
-
+        #}
 
         <audio id="audioBoda" controls autoplay loop>
             <source src="{{ url_audio}}" type="audio/mpeg">

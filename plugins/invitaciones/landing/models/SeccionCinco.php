@@ -22,12 +22,15 @@ class SeccionCinco extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['*'];
 
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'image' => 'required',
+        'titulo' => 'required',
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -69,6 +72,14 @@ class SeccionCinco extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'image' => 'System\Models\File'
+    ];
     public $attachMany = [];
+
+    public function getThumbAttribute()
+    {
+        return $this->image ? $this->image->getThumb(220, 100) : null;
+    }
+
 }
