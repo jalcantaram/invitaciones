@@ -25,9 +25,9 @@ function onStart(){
         <title>Boda de {{ seccionuno.dataSeccion.titulo }}</title>
         <link href="{{ [
             'assets/less/theme.scss',
-            'assets/css/animate.min.css'
+            'assets/css/animate.min.css',
+            'assets/css/swiper-bundle.min.css'
         ]|theme }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation animated" id="top-nav">
@@ -335,13 +335,12 @@ function onStart(){
             '@framework',
             '@framework.extras',
             'assets/js/bootstrap.bundle.min.js',
-            'assets/js/app.js'
+            'assets/js/app.js',
+            'assets/js/swiper-bundle.min.js'
         ]|theme }}"></script>
-        <script>
-            contador("{{secciontres.dataSeccion.fecha_celebracion}}");
-        </script>
         <script type="text/javascript">
-            console.log(navigator);
+            contador("{{secciontres.dataSeccion.fecha_celebracion}}");
+            // console.log(navigator);
             var vAudio = document.getElementById('audioBoda');
             var promise = vAudio.play();
             if (promise !== undefined) {
@@ -361,6 +360,22 @@ function onStart(){
                 document.getElementById("sonidoMusicaOn").classList.remove("hidden");
                 document.getElementById("sonidoMusicaOff").classList.add('hidden');
                 vAudio.play();
+            }
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+                },
+                pagination: {
+                el: ".swiper-pagination",
+                },
             });
         </script>
     </body>
