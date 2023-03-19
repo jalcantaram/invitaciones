@@ -28,7 +28,6 @@ function onStart(){
             'assets/css/animate.min.css',
             'assets/css/swiper-bundle.min.css'
         ]|theme }}" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navigation animated" id="top-nav">
@@ -321,10 +320,14 @@ function onStart(){
             </div><!-- .container close -->
         </section><!-- header close -->
         #}
-
-        <audio id="audioBoda" controls autoplay loop>
+        <div class="musicaOff hidden" target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
+            <i class="fa fa-volume-up flotante" id="iconoMusica"></i>
+        </div>
+        <div class="musicaOn" target="_blank" id="sonidoMusicaOn" style="cursor: pointer;">
+            <img src="{{ 'assets/images/musica-on-4.gif' | theme }}">
+        </div>
+        <audio id="audioBoda" loop="">
             <source src="{{ url_audio}}" type="audio/mpeg">
-            Your browser does not support the audio element.
         </audio>
 
         <script src="{{ [
@@ -346,6 +349,17 @@ function onStart(){
                 }).catch(error => {
                     alert('Verifica los permisos de tu navegador.');
                 });
+            } 
+
+            document.getElementById("sonidoMusicaOn").addEventListener('click',function(){
+                document.getElementById("sonidoMusicaOff").classList.remove('hidden');
+                document.getElementById("sonidoMusicaOn").classList.add("hidden");
+                vAudio.pause();
+            });
+            document.getElementById('sonidoMusicaOff').addEventListener('click',function(){
+                document.getElementById("sonidoMusicaOn").classList.remove("hidden");
+                document.getElementById("sonidoMusicaOff").classList.add('hidden');
+                vAudio.play();
             }
             var swiper = new Swiper(".mySwiper", {
                 effect: "coverflow",
