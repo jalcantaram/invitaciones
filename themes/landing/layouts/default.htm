@@ -320,15 +320,17 @@ function onStart(){
             </div><!-- .container close -->
         </section><!-- header close -->
         #}
-        <div class="musicaOff hidden" target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
-            <i class="fa fa-volume-up flotante" id="iconoMusica"></i>
-        </div>
-        <div class="musicaOn" target="_blank" id="sonidoMusicaOn" style="cursor: pointer;">
-            <img src="{{ 'assets/images/musica-on-4.gif' | theme }}">
-        </div>
-        <audio id="audioBoda" loop="">
-            <source src="{{ url_audio}}" type="audio/mpeg">
-        </audio>
+        {% if has_audio %}
+            <div class="musicaOff" target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
+                <img src="{{ 'assets/images/volume-up-solid.svg' | theme }}" alt="">
+            </div>
+            <div class="musicaOn" target="_blank" id="sonidoMusicaOn" style="cursor: pointer;">
+                <img src="{{ 'assets/images/musica-on-4.gif' | theme }}">
+            </div>
+            <audio id="audioBoda" loop="" class="d-none">
+                <source src="{{ url_audio }}" type="audio/mpeg">
+            </audio>
+        {% endif %}
 
         <script src="{{ [
             '@jquery',
@@ -338,45 +340,53 @@ function onStart(){
             'assets/js/app.js',
             'assets/js/swiper-bundle.min.js'
         ]|theme }}"></script>
-        <script type="text/javascript">
-            contador("{{secciontres.dataSeccion.fecha_celebracion}}");
-            // console.log(navigator);
-            var vAudio = document.getElementById('audioBoda');
-            var promise = vAudio.play();
-            if (promise !== undefined) {
-                promise.then(_ => {
-                    console.log('autoplay');
-                }).catch(error => {
-                    alert('Verifica los permisos de tu navegador.');
-                });
-            } 
+        <script type='text/javascript'>
+            contador('{{secciontres.dataSeccion.fecha_celebracion}}');
 
-            document.getElementById("sonidoMusicaOn").addEventListener('click',function(){
-                document.getElementById("sonidoMusicaOff").classList.remove('hidden');
-                document.getElementById("sonidoMusicaOn").classList.add("hidden");
-                vAudio.pause();
-            });
-            document.getElementById('sonidoMusicaOff').addEventListener('click',function(){
-                document.getElementById("sonidoMusicaOn").classList.remove("hidden");
-                document.getElementById("sonidoMusicaOff").classList.add('hidden');
-                vAudio.play();
-            }
             var swiper = new Swiper(".mySwiper", {
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
                 slidesPerView: "auto",
                 coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
                 },
                 pagination: {
-                el: ".swiper-pagination",
+                    el: ".swiper-pagination",
                 },
             });
         </script>
+        {% if has_audio %}
+            <script type="text/javascript">
+                var vAudio = document.getElementById('audioBoda');
+                var promise = vAudio.play();
+                if (promise !== undefined) {
+                    promise.then(_ => {
+                        document.getElementById('sonidoMusicaOff').classList.add('d-none');
+                        vAudio.muted = false;
+                        // console.log('autoplay');
+                    }).catch(error => {
+                        document.getElementById('sonidoMusicaOn').classList.add('d-none');
+                        alert('Verifica los permisos de tu navegador.');
+                    });
+                } 
+                
+                document.getElementById('sonidoMusicaOff').addEventListener('click',function(){
+                    document.getElementById('sonidoMusicaOn').classList.remove('d-none');
+                    this.classList.add('d-none');
+                    vAudio.play();
+                });
+
+                document.getElementById('sonidoMusicaOn').addEventListener('click',function(){
+                    document.getElementById('sonidoMusicaOff').classList.remove('d-none');
+                    this.classList.add('d-none');
+                    vAudio.pause();
+                });
+            </script>
+        {% endif %}
     </body>
 </html>

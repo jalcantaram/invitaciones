@@ -470,9 +470,8 @@ html {
     font-family: montserrat;
     color: #fff;
     border-radius: 3px 0 0 3px;
-    padding: 12px;
+    padding: 10px;
     font-weight: 100;
-    font-size: 22px;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -480,9 +479,40 @@ html {
     text-align: center;
 }
 
-.musicaOff .flotante {
-    margin-top: 2px!important;
+.musicaOn {
+    float:left;
+    right:0;
+    top:45%;
+    position:fixed;
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+    background-color:#f69c9b;
+    letter-spacing:3px;
+    font-family:montserrat;
+    color:#fff;
+    border-radius:3px 0 0 3px;
+    font-weight:100;
+    font-size:22px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    z-index:1000;
+    text-align:center;
 }
+
+.musicaOn img {
+    width:50px;
+    height:50px
+}
+
+.musicaOff img {
+    width:32px;
+    height:32px
+}
+
 
 audio:not([controls]) {
     display: none;
