@@ -3,6 +3,24 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    nombre_completo:
+        label: Nombre Completo
+        placeholder: Nombre completo
+        description: Nombre completo del invitado
+        required: true
+        type: text
+        size: small
+    email:
+        label: Email
+        placeholder: Email
+        description: Email del invitado
+        required: true
+        type: email
+        size: small
+    celular:
+        label: Celular
+        placeholder: Celular
+        description: Celular del invitado
+        required: true
+        type: number
+        size: small

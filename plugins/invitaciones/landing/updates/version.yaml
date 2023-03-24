@@ -24,3 +24,6 @@
       - create_seccion_ochos_table.php
       - First version seccion nueve
       - create_seccion_nueves_table.php
+1.0.9:
+      - Add seccion_cuatro
+      - add_seccion_cuatros_table.php
