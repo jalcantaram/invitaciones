@@ -27,7 +27,11 @@ class SeccionCuatro extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'nombre_completo' => 'required',
+        'email' => 'required|email',
+        'celular' => ['required','regex:/^([1-9]{1})?([1-9]{1})?([1-9]{1})?([0-9]{7})$/'],
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -71,4 +75,24 @@ class SeccionCuatro extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function listPreferenciaComida($fieldName, $value, $formData){
+        return [
+            '' => 'Selecciona una opción',
+            '1' => 'Res (Carne)',
+            '2' => 'Ave (Pollo)',
+        ];
+    }
+    public function listAsistencia($fieldName, $value, $formData){
+        return [
+            '' => 'Selecciona una opción',
+            '1' => 'Si',
+            '2' => 'No',
+        ];
+    }
+    public function afterCreate(){
+        $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
+        $this->active = true;
+        $this->save();
+    }
 }

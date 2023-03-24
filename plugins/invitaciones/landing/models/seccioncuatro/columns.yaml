@@ -6,3 +6,13 @@ columns:
     id:
         label: ID
         searchable: true
+    nombre_completo:
+        label: Nombre completo
+        sercheable: true
+    email:
+        label: Correo electrónico
+        sercheable: true
+    celular:
+        label: Número de celular
+        sercheable: true
+    
