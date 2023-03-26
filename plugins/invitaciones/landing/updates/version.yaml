@@ -27,3 +27,6 @@
 1.0.9:
       - Add seccion_cuatro
       - add_seccion_cuatros_table.php
+1.1.0:
+      - Add nuevos atributos seccion_cuatro
+      - add_new_fields_dos_seccion_cuatros_table.php

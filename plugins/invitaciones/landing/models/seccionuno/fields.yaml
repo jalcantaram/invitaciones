@@ -4,66 +4,74 @@
 
 fields:
     titulo:
-        label: Titulo
+        label: Titulo Principal de la Página
         placeholder: Titulo
         description: Titulo
         required: true
         type: text
-        span: left
-    color_titulo:
-        label: Color de Titulo
-        placeholder: Color de Titulo
-        required: true
-        type: colorpicker
-        span: right
     sub_titulo:
         label: Sub Titulo
         placeholder: Sub Titulo
         description: Sub Titulo
         required: true
         type: text
-        span: left
+        cssClass: p-l-0 col-xs-4
+        span: storm
     color_sub_titulo:
         label: Color de SubTitulo
         placeholder: Color de SubTitulo
         required: true
         type: colorpicker
-        span: right
+        cssClass: p-r-0 col-xs-8
+        span: storm
     nombre_novio:
         label: Titulo del nombre novio
         placeholder: Titulo del nombre novio
         description: Titulo del nombre novio
         required: true
         type: text
-        span: left
+        cssClass: p-l-0 col-xs-4
+        span: storm
     color_nombre_novio:
         label: Color del titulo (nombre novio)
         placeholder: Color del titulo (nombre novio)
         description: Color del titulo (nombre novio)
         required: true
         type: colorpicker
-        span: right
+        cssClass: p-r-0 col-xs-8
+        span: storm
     nombre_novia:
         label: Titulo del nombre novia
         placeholder: Titulo del nombre novia
         description: Titulo del nombre novia
         required: true
         type: text
-        span: left
+        cssClass: p-l-0 col-xs-4
+        span: storm
     color_nombre_novia:
         label: Color del titulo (nombre novia)
         placeholder: Color del titulo (nombre novia)
         description: Color del titulo (nombre novia)
         required: true
         type: colorpicker
-        span: right
+        cssClass: p-r-0 col-xs-8
+        span: storm
     fecha:
-        label: Fecha boda
-        placeholder: Fecha boda
+        label: Fecha de la boda (Ej. 10 de Octubre de 2023)
+        placeholder: Fecha boda (Ej. 10 de Octubre de 2023)
         description: Fecha boda
         required: true
         type: text
-        span: left
+        cssClass: p-l-0 col-xs-4
+        span: storm
+    color_texto_complementario:
+        label: Color de la fecha de la boda
+        placeholder: Color de la fecha de la boda
+        description: Color de la fecha de la boda
+        required: true
+        type: colorpicker
+        cssClass: p-r-0 col-xs-8
+        span: storm
     background:
         label: Imagen de fondo
         placeholder: Imagen de fondo
@@ -71,8 +79,8 @@ fields:
         type: fileupload
         fileTypes: .jpg, .png
         mode: image
-        imageHeight: 260
-        imageWidth: 260
+        span: full
+        imageHeight: 250
         thumbOptions:
             mode: crop
             offset:
