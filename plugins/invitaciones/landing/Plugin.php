@@ -2,6 +2,8 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Invitaciones\Landing\Models\SeccionCuatro;
+
 
 /**
  * landing Plugin Information File
@@ -111,31 +113,31 @@ class Plugin extends PluginBase
                 'order'       => 500,
                 'sideMenu' => [
                     'seccion_uno' => [
-                        'label' => 'Primera sección (titulo)',
+                        'label' => 'Sección de configuración (titulos)',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/seccionuno'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
-                    'seccion_dos' => [
-                        'label' => 'Sección dos',
-                        'icon' => 'icon-upload',
-                        'url' => Backend::url('invitaciones/landing/secciondos'),
-                        'permissions' => ['invitaciones.landing.*'],
-                    ],
+                    // 'seccion_dos' => [
+                    //     'label' => 'Sección dos',
+                    //     'icon' => 'icon-upload',
+                    //     'url' => Backend::url('invitaciones/landing/secciondos'),
+                    //     'permissions' => ['invitaciones.landing.*'],
+                    // ],
                     'seccion_tres' => [
-                        'label' => 'Sección tres (Donde y Cuando)',
+                        'label' => 'Sección de configuración (Donde y Cuando)',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/secciontres'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
                     'seccion_cuatro' => [
-                        'label' => 'Sección cuatro (Formulario de confirmación)',
+                        'label' => 'Sección de carga (Formulario de confirmación)',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/seccioncuatro'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
                     'seccion_cinco' => [
-                        'label' => 'Sección cinco (Fotos - Slider)',
+                        'label' => 'Sección de configuración (Fotos - Slider)',
                         'icon' => 'icon-picture-o',
                         'url' => Backend::url('invitaciones/landing/seccioncinco'),
                         'permissions' => ['invitaciones.landing.*'],
@@ -175,6 +177,20 @@ class Plugin extends PluginBase
             'img_carousel_thumb' => function ($src) {
                 return "<img src=\"$src\" alt=\"\">";
             },
+            'getmesa' => function ($i){
+                $c = new SeccionCuatro;
+                $l = $c->listMesa('', '', '');
+                return $l[$i];
+            },
+            'getestatus' => function ($it){
+                if(!isset($it)){
+                    return 'Registrado';
+                } else {
+                    $c = new SeccionCuatro;
+                    $l = $c->listEstatus('', '', '');
+                    return $l[$it];
+                }
+            }
         ];
     }
 }

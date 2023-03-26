@@ -15,4 +15,13 @@ columns:
     celular:
         label: Número de celular
         sercheable: true
-    
+    numero_mesa:
+        label: Número de mesa
+        type: getmesa
+    active:
+        label: Estatus
+        type: getestatus
+    send_button:
+        label: Enviar invitacion
+        type: partial
+        path: ~/plugins/invitaciones/landing/controllers/seccioncuatro/_button_invitacion.htm

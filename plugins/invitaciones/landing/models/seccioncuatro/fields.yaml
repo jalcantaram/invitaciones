@@ -9,18 +9,30 @@ fields:
         description: Nombre completo del invitado
         required: true
         type: text
-        size: small
+        span: storm
+        cssClass: p-l-0 col-xs-6
     email:
         label: Email
         placeholder: Email
         description: Email del invitado
         required: true
         type: email
-        size: small
+        span: storm
+        cssClass: p-r-0 col-xs-6
     celular:
-        label: Celular
+        label: Número de celular
         placeholder: Celular
         description: Celular del invitado
         required: true
         type: number
-        size: small
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    numero_mesa:
+        label: Número de mesa
+        placeholder: Número de mesa del invitado
+        description: Número de mesa del invitado
+        required: true
+        type: dropdown
+        options: listMesa
+        span: storm
+        cssClass: p-r-0 col-xs-6

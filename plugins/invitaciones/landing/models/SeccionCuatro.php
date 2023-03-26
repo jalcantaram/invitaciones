@@ -29,8 +29,9 @@ class SeccionCuatro extends Model
      */
     public $rules = [
         'nombre_completo' => 'required',
-        'email' => 'required|email',
+        'email' => 'required|email|unique:invitaciones_landing_seccion_cuatros',
         'celular' => ['required','regex:/^([1-9]{1})?([1-9]{1})?([1-9]{1})?([0-9]{7})$/'],
+        'numero_mesa' => 'required',
     ];
 
     /**
@@ -83,6 +84,7 @@ class SeccionCuatro extends Model
             '2' => 'Ave (Pollo)',
         ];
     }
+
     public function listAsistencia($fieldName, $value, $formData){
         return [
             '' => 'Selecciona una opción',
@@ -90,9 +92,36 @@ class SeccionCuatro extends Model
             '2' => 'No',
         ];
     }
+
+    public function listEstatus($fieldName, $value, $formData){
+        return [
+            '1' => 'Enviado',
+            '2' => 'Confirmado',
+            '3' => 'Expirado',
+        ];
+    }
+
+    public function listMesa($fieldName, $value, $formData){
+        return [
+            '1' => 'Mesa #1',
+            '2' => 'Mesa #2',
+            '3' => 'Mesa #3',
+            '4' => 'Mesa #4',
+            '5' => 'Mesa #5',
+            '6' => 'Mesa #6',
+            '7' => 'Mesa #7',
+            '8' => 'Mesa #8',
+            '9' => 'Mesa #9',
+            '10' => 'Mesa #10',
+            '11' => 'Mesa #11',
+            '12' => 'Mesa #12',
+            '13' => 'Mesa #13',
+            '14' => 'Mesa #14',
+            '15' => 'Mesa #15',
+        ];
+    }
     public function afterCreate(){
         $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
-        $this->active = true;
         $this->save();
     }
 }

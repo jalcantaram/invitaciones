@@ -8,28 +8,32 @@ fields:
         description: Ej. "Finca San Javier"
         required: true
         type: text
-        span: left
+        span: storm
+        cssClass: p-l-0 col-xs-6
     subtitulo_recepcion:
         label: Nombre del lugar donde será la recepción
         placeholder: Nombre del lugar donde será la recepción
         description: Ej. "Finca San Javier"
         required: true
         type: text
-        span: right
+        span: storm
+        cssClass: p-r-0 col-xs-6
     donde_ceremonia:
         label: Dirección del lugar donde será la ceremonia
         placeholder: Dirección del lugar donde será la ceremonia
         description: Dirección del lugar donde será la ceremonia
         required: true
         type: text
-        span: left
+        span: storm
+        cssClass: p-l-0 col-xs-6
     donde_recepcion:
         label: Dirección del lugar donde será la recepción
         placeholder: Dirección del lugar donde será la recepción
         description: Dirección del lugar donde será la recepción
         required: true
         type: text
-        span: right
+        span: storm
+        cssClass: p-r-0 col-xs-6
     hora_ceremonia: 
         label: Hora de la ceremonia
         placeholder: Hora de la ceremonia
@@ -37,7 +41,8 @@ fields:
         required: true
         type: datepicker
         mode: time
-        span: left
+        span: storm
+        cssClass: p-l-0 col-xs-6
     hora_recepcion:
         label: Hora de la recepción
         placeholder: Hora de la recepción
@@ -45,21 +50,24 @@ fields:
         required: true
         type: datepicker
         mode: time
-        span: right
+        span: storm
+        cssClass: p-r-0 col-xs-6
     link_googlemaps_ceremonia: 
         label: Link de google maps para saber llegar a la ceremonia
         placeholder: Link de google maps para saber llegar a la ceremonia
         description: Link de google maps para saber llegar a la ceremonia
         required: true
         type: text
-        span: left
+        span: storm
+        cssClass: p-l-0 col-xs-6
     link_googlemaps_recepcion:
         label: Link de google maps para saber llegar a la recepción
         placeholder: Link de google maps para saber llegar a la recepción
         description: Link de google maps para saber llegar a la recepción
         required: true
         type: text
-        span: right
+        span: storm
+        cssClass: p-r-0 col-xs-6
     foto_novia:
         label: Foto de la novia
         placeholder: Foto de la novia
@@ -79,7 +87,8 @@ fields:
             sharpen: 0
             interlace: false
             extension: auto
-        span: left
+        span: storm
+        cssClass: p-l-0 col-xs-6
     foto_novio:
         label: Foto del novio
         placeholder: Foto del novio
@@ -99,21 +108,8 @@ fields:
             sharpen: 0
             interlace: false
             extension: auto
-        span: right
-    text_color:
-        label: Color de texto
-        placeholder: Color de texto
-        description: Color del texto de la frase
-        required: false
-        type: text
-        span: right
-    background_color:
-        label: Color de fondo
-        placeholder: Color de fondo
-        description: Color de fondo
-        required: false
-        type: text
-        span: left
+        span: storm
+        cssClass: p-r-0 col-xs-6
     fecha_celebracion:
         label: Fecha de la celebración
         placeholder: Fecha de la celebración
