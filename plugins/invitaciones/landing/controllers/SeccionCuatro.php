@@ -3,6 +3,8 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 
+use Invitaciones\Landing\Models\SeccionCuatro as SeccionCuatroModel;
+
 /**
  * Seccion Cuatro Back-end Controller
  */
@@ -31,5 +33,17 @@ class SeccionCuatro extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Invitaciones.Landing', 'landing', 'seccioncuatro');
+    }
+
+    public function onSendInvitacion(){
+        $data = post();
+        
+        $_id = (int) $data['rowid'];
+        
+        $sc = SeccionCuatroModel::findOrFail($_id);
+
+        \Log::info($sc);
+        
+
     }
 }

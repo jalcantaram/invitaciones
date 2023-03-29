@@ -12,7 +12,7 @@ modelClass: Invitaciones\Landing\Models\SeccionCuatro
 title: Manage Seccion Cuatros
 
 # Link URL for each record
-recordUrl: invitaciones/landing/seccioncuatro/update/:id
+recordUrl: 
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
