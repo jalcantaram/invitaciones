@@ -3,9 +3,6 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
     nombre_completo:
         label: Nombre completo
         sercheable: true
@@ -21,7 +18,11 @@ columns:
     active:
         label: Estatus
         type: getestatus
+    edit_invitacion:
+        label: Editar
+        type: partial
+        path: ~/plugins/invitaciones/landing/controllers/seccioncuatro/_button_edit.htm
     send_button:
-        label: Enviar invitacion
+        label: Enviar
         type: partial
         path: ~/plugins/invitaciones/landing/controllers/seccioncuatro/_button_invitacion.htm
