@@ -2,7 +2,10 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-
+use Mail;
+use Flash;
+use Backend;
+use Request;
 use Invitaciones\Landing\Models\SeccionCuatro as SeccionCuatroModel;
 
 /**
@@ -42,8 +45,18 @@ class SeccionCuatro extends Controller
         
         $sc = SeccionCuatroModel::findOrFail($_id);
 
-        \Log::info($sc);
+        $link = \Url::to('/'.'?code='.$sc->token);
+        
+        $data = [
+            'name' => $sc->nombre_completo,
+            'link' => $link,
+        ];
+        
+        Mail::send('landing::send.invitaciones', $data, function ($message) use ($sc) {
+            $message->to($sc->email, $sc->nombre_completo)->subject('Gris & Xavi');
+        });
         
 
+        Flash::success('Correo enviado exitosamente!');
     }
 }

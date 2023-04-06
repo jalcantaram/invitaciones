@@ -30,7 +30,7 @@
 .field-markdowneditor.stretch,
 .field-markdowneditor.stretch .editor-toolbar {border-radius:0 !important}
 .field-markdowneditor.stretch .editor-toolbar {height:auto}
-.field-markdowneditor.stretch .editor-write {float:none;height:calc(100% - 40px);position:relative;min-height:0}
+.field-markdowneditor.stretch .editor-write {float:none;height:calc(100% - 40px);position:relative;}
 .field-markdowneditor.stretch .editor-preview {float:none;height:auto;position:absolute;left:0;right:0;top:0;bottom:0;margin-top:40px}
 .field-markdowneditor.stretch.mode-split .editor-preview {left:auto}
 .field-markdowneditor.stretch.mode-split .editor-write {right:auto}

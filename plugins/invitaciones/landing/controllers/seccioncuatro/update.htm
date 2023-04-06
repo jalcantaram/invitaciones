@@ -8,8 +8,30 @@
 <?php if (!$this->fatalError): ?>
 
     <?= Form::open(['class' => 'layout']) ?>
-
         <div class="layout-row">
+            <div class="layout-row">
+                <div class="form-widget form-elements layout">
+                    <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
+                        <button 
+                            class="btn btn-sm btn-success"
+                            data-request="onSendInvitacion"
+                            data-request-confirm="Deseas enviar la invitación por correo electrónico?"
+                            data-stripe-load-indicator
+                            data-request-data="rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                            >Enviar correo de invitación</button>
+                    </div>
+                    <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
+                        <button 
+                        class="btn btn-sm btn-success"
+                        data-request="onSendInvitacion"
+                        data-request-confirm="Deseas enviar la invitación por whatsapp?"
+                        data-stripe-load-indicator
+                        data-request-data=" numcel: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                        >Enviar whatsapp de invitación</button>
+                    </div>
+                </div>
+                <br>
+            </div>
             <?= $this->formRender() ?>
         </div>
 
@@ -22,7 +44,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Saving SeccionCuatro..."
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <u>G</u>uardar
                 </button>
                 <button
                     type="button"
@@ -31,7 +53,7 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Saving SeccionCuatro..."
                     class="btn btn-default">
-                    Save and Close
+                    Guardar y cerrar
                 </button>
                 <button
                     type="button"
@@ -41,7 +63,7 @@
                     data-request-confirm="Delete this seccioncuatro?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Cancel</a>
+                    o <a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Cancelar</a>
                 </span>
             </div>
         </div>
