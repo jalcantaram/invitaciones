@@ -22,7 +22,3 @@ columns:
         label: Editar
         type: partial
         path: ~/plugins/invitaciones/landing/controllers/seccioncuatro/_button_edit.htm
-    send_button:
-        label: Enviar
-        type: partial
-        path: ~/plugins/invitaciones/landing/controllers/seccioncuatro/_button_invitacion.htm
