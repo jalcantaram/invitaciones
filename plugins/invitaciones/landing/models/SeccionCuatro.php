@@ -79,25 +79,45 @@ class SeccionCuatro extends Model
 
     public function listPreferenciaComida($fieldName, $value, $formData){
         return [
-            '' => 'Selecciona una opción',
             '1' => 'Res (Carne)',
             '2' => 'Ave (Pollo)',
         ];
     }
 
+    public function listPreferenciaBebida($fieldName, $value, $formData){
+        return [
+            '1' => 'Ron',
+            '2' => 'Cerveza',
+            '3' => 'Tequila',
+            '4' => 'Whisky',
+            '5' => 'Mezcal',
+            '6' => 'Vodka',
+        ];
+    }
+
     public function listAsistencia($fieldName, $value, $formData){
         return [
-            '' => 'Selecciona una opción',
-            '1' => 'Si',
-            '2' => 'No',
+            '1' => 'Si, asistiré',
+            '2' => 'No asistiré',
         ];
     }
 
     public function listEstatus($fieldName, $value, $formData){
+        /*
+            - registrado
+            - enviado (email | whatsapp)
+            - recibido
+            - leido
+            - confirmado
+            - expirado
+        */
         return [
-            '1' => 'Enviado',
-            '2' => 'Confirmado',
-            '3' => 'Expirado',
+            '1' => 'Registrado',
+            '2' => 'Enviado',
+            '3' => 'Recibido',
+            '4' => 'Leido',
+            '5' => 'Confirmado',
+            '6' => 'Expirado',
         ];
     }
 
@@ -122,6 +142,7 @@ class SeccionCuatro extends Model
     }
     public function afterCreate(){
         $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
+        $this->estatus = 1;
         $this->save();
     }
 }

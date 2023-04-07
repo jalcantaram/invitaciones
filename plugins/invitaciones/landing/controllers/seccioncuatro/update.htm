@@ -23,10 +23,10 @@
                     <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
                         <button 
                         class="btn btn-sm btn-success"
-                        data-request="onSendInvitacion"
+                        data-request="onSendWhatsAppInvitacion"
                         data-request-confirm="Deseas enviar la invitación por whatsapp?"
                         data-stripe-load-indicator
-                        data-request-data=" numcel: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                        data-request-data=" rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
                         >Enviar whatsapp de invitación</button>
                     </div>
                 </div>
