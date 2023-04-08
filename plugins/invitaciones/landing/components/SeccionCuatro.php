@@ -23,7 +23,6 @@ class SeccionCuatro extends ComponentBase
     }
 
     public function onSave(){
-        \Log::info(post());
         $data = post();
         $rules = [
             'asistencia' => 'required',
@@ -38,7 +37,24 @@ class SeccionCuatro extends ComponentBase
         if ($validation->fails()) {
             throw new ValidationException($validation);
         }
-        // TERMINAR GUARDADO
-        Flash::success('Jobs done!');
+
+        $c = new SeccionCuatroModel;
+        $comidas = $c->listPreferenciaComida('', '', '');
+        $bebidas = $c->listPreferenciaBebida('', '', '');
+        $asistencias = $c->listAsistencia('', '', '');
+
+        $sc = SeccionCuatroModel::where('token', $data['code'])->first();
+        $sc->preferencia_comida = $data['proteina'];
+        $sc->asistencia  = $data['asistencia'];
+        $sc->preferencia_bebidas = $data['bebida'];
+        $sc->mensaje = $data['mensaje'];
+        $sc->estatus = 5;
+        $sc->active = false;
+        $sc->save();
+        \Log::info($sc);
+        Flash::success('Confirmación enviada exitosamente!');
+        return [
+            '#confirmacionPartial' => $this->renderPartial('@_success', ['data' => $sc, 'comidas' => $comidas, 'bebidas' => $bebidas, 'asistencias' => $asistencias])
+        ];
     }
 }
