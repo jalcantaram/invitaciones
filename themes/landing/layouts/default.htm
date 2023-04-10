@@ -292,6 +292,77 @@ function onStart(){
                         <br>
                     </div>
                 </form>
+            {% else %}
+                <form id="deseos" class="form-reservacion">
+                    <div class="wrap-send">
+                        <div class="enviando">
+                            <div class="box">
+                                <div class="border one"></div>
+                                <div class="border two"></div>
+                                <div class="border three"></div>
+                                <div class="border four"></div>
+                                <div class="line one"></div>
+                                <div class="line two"></div>
+                                <div class="line three"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="confirmacionPartial">
+                        <div class="iniciales">
+                            <span>G</span>
+                            <div class="divisor"></div>
+                            <span>X</span>
+                        </div>
+                        <h4>Confirma tu asistencia</h4>
+                        <p class="ninos">Evento con adolescentes mayores de 12 años.</p>
+                        <div class="row">
+                            <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" readonly disabled>
+                        </div>
+                        <div class="row col-12">
+                            <div class="col-md-6 col-6 inputs-cols-left"> 
+                                <input type="email" placeholder="· Email" class="usr-correo" readonly disabled>
+                            </div>
+                            <div class="col-md-6 col-6 inputs-cols-right"> 
+                                <input type="tel" placeholder="· Teléfono" class="usr-telefono" pattern="[5]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" maxlength="10" minlength="10" readonly disabled>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row col-12">
+                            <div class="col-md-12 col-12 inputs-cols-left inputs-cols-right mb-4">
+                                <select id="asistencia" class="asistencia mb-1">
+                                    <option value="" disabled="" selected="">· Asistencia</option>
+                                    {% for key, asistencia in asistencias %}
+                                        <option value="{{ key }}">{{ asistencia }}</option>
+                                    {% endfor %}
+                                </select>
+                                <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="asistencia"></div>
+                            </div>
+                            <div class="col-md-6 col-6 inputs-cols-left">
+                                <select id="proteina" class="proteina mb-1">
+                                    <option value="" disabled="" selected="">· Preferencia de proteina</option>
+                                    {% for key, comida in comidas %}
+                                        <option value="{{ key }}">{{ comida }}</option>
+                                    {% endfor %}
+                                </select>
+                                <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="proteina"></div>
+                            </div>
+                            <div class="col-md-6 col-6 inputs-cols-right">
+                                <select id="bebida" class="bebida mb-1">
+                                    <option value="" disabled="" selected="">· Preferencia de Bebidas</option>
+                                    {% for key, bebida in bebidas %}
+                                        <option value="{{ key }}">{{ bebida }}</option>
+                                    {% endfor %}
+                                </select>
+                                <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="bebida"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <textarea type="text" placeholder="· Dedica un mensaje..." class="deseos-invitados mb-1" name="mensaje"></textarea>
+                            <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="mensaje"></div>
+                        </div>
+                        <button type="submit" class="btn-grl">Confirmar</button>
+                    </div>
+                </form>
             {% endif %}
         </section>
 
