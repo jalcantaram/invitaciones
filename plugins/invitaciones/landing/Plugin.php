@@ -74,12 +74,12 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
-            'invitaciones.landing.some_permission' => [
+            'invitaciones.landing.send' => [
                 'tab' => 'landing',
-                'label' => 'Some permission'
+                'label' => 'Permiso para enviar y configurar invitaciones'
             ],
         ];
     }
@@ -177,15 +177,22 @@ class Plugin extends PluginBase
             'img_carousel_thumb' => function ($src) {
                 return "<img src=\"$src\" alt=\"\">";
             },
+            'getasistencia' => function ($ia){
+                if(isset($ia)){
+                    $c = new SeccionCuatro;
+                    $a = $c->listAsistencia('', '', '');
+                    return $a[$ia];
+                }
+            },
             'getmesa' => function ($i){
-                $c = new SeccionCuatro;
-                $l = $c->listMesa('', '', '');
-                return $l[$i];
+                if(isset($i)){
+                    $c = new SeccionCuatro;
+                    $l = $c->listMesa('', '', '');
+                    return $l[$i];
+                }
             },
             'getestatus' => function ($it){
-                if(!isset($it)){
-                    return 'Registrado';
-                } else {
+                if(isset($it)){
                     $c = new SeccionCuatro;
                     $l = $c->listEstatus('', '', '');
                     return $l[$it];
