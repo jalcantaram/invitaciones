@@ -12,10 +12,13 @@ columns:
     celular:
         label: Número de celular
         sercheable: true
+    asistencia:
+        label: ¿Asistirá?
+        type: getasistencia
     numero_mesa:
         label: Número de mesa
         type: getmesa
-    active:
+    estatus:
         label: Estatus
         type: getestatus
     edit_invitacion:
