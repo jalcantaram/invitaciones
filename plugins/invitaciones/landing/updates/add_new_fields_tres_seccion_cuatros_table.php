@@ -8,7 +8,7 @@ class AddNewFieldsTresSeccionCuatrosTable extends Migration
     public function up()
     {
         Schema::table('invitaciones_landing_seccion_cuatros', function ($table) {
-            $table->string('estatus')->nullable();
+            $table->integer('estatus')->nullable();
             $table->string('send_email')->nullable();
             $table->string('send_whatsapp')->nullable();
             $table->dateTime('send_email_at')->nullable();

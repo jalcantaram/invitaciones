@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    descripcion:
+        label: Descripción
+        searchable: true
+    active:
+        label: Activo
+        type: getactive
+    created_at:
+        label: Fecha de creación
+        searchable: true
