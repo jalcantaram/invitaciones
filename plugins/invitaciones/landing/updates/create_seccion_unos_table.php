@@ -11,17 +11,17 @@ class CreateSeccionUnosTable extends Migration
         Schema::create('invitaciones_landing_seccion_unos', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('color_titulo');
+            $table->string('titulo')->nullable();
+            $table->string('color_titulo')->nullable();
             $table->string('sub_titulo')->nullable();
             $table->string('color_sub_titulo')->nullable();
             $table->text('texto_complementario')->nullable();
             $table->string('color_texto_complementario')->nullable();
-            $table->string('nombre_novio');
-            $table->string('color_nombre_novio');
-            $table->string('nombre_novia');
-            $table->string('color_nombre_novia');
-            $table->string('fecha');
+            $table->string('nombre_novio')->nullable();
+            $table->string('color_nombre_novio')->nullable();
+            $table->string('nombre_novia')->nullable();
+            $table->string('color_nombre_novia')->nullable();
+            $table->string('fecha')->nullable();
             $table->timestamps();
         });
     }
