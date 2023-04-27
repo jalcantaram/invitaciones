@@ -58,12 +58,6 @@ class Plugin extends PluginBase
             'Invitaciones\Landing\Components\SeccionTres' => 'secciontres',
             'Invitaciones\Landing\Components\SeccionCuatro' => 'seccioncuatro',
             'Invitaciones\Landing\Components\SeccionCinco' => 'seccioncinco',
-            // 'Invitaciones\Landing\Components\SeccionSeis' => 'seccionseis',
-            // 'Invitaciones\Landing\Components\SeccionSiete' => 'seccionsiete',
-            // 'Invitaciones\Landing\Components\SeccionOcho' => 'seccionocho',
-            // 'Invitaciones\Landing\Components\SeccionNueve' => 'seccionnueve',
-
-
         ];
     }
 
@@ -81,6 +75,10 @@ class Plugin extends PluginBase
                 'tab' => 'landing',
                 'label' => 'Permiso para enviar y configurar invitaciones'
             ],
+            'invitaciones.landing.catalogos' => [
+                'tab' => 'catalogos',
+                'label' => 'Permiso para configurar catalogos'
+            ],
         ];
     }
 
@@ -93,19 +91,6 @@ class Plugin extends PluginBase
     {
         return [
             'landing' => [
-                // 'label'       => 'landing',
-                // 'url'         => Backend::url('invitaciones/landing/custom'),
-                // 'icon'        => 'icon-leaf',
-                // 'permissions' => ['invitaciones.landing.*'],
-                // 'order'       => 500,
-                // 'sideMenu' => [
-                //     'seccion_uno' => [
-                //         'label' => 'Primera sección (titulo)',
-                //         'icon' => 'icon-upload',
-                //         'url' => Backend::url('invitaciones/landing/seccion_uno'),
-                //         'permissions' => ['invitaciones.landing.*'],
-                //     ],
-                // ],
                 'label'       => 'landing',
                 'url'         => Backend::url('invitaciones/landing/seccionuno'),
                 'icon'        => 'icon-leaf',
@@ -118,12 +103,6 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/seccionuno'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
-                    // 'seccion_dos' => [
-                    //     'label' => 'Sección dos',
-                    //     'icon' => 'icon-upload',
-                    //     'url' => Backend::url('invitaciones/landing/secciondos'),
-                    //     'permissions' => ['invitaciones.landing.*'],
-                    // ],
                     'seccion_tres' => [
                         'label' => 'Sección de configuración (Donde y Cuando)',
                         'icon' => 'icon-upload',
@@ -142,30 +121,21 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/seccioncinco'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
-                    // 'seccion_seis' => [
-                    //     'label' => 'Sección seis',
-                    //     'icon' => 'icon-upload',
-                    //     'url' => Backend::url('invitaciones/landing/seccionseis'),
-                    //     'permissions' => ['invitaciones.landing.*'],
-                    // ],
-                    // 'seccion_siete' => [
-                    //     'label' => 'Sección siete',
-                    //     'icon' => 'icon-upload',
-                    //     'url' => Backend::url('invitaciones/landing/seccionsiete'),
-                    //     'permissions' => ['invitaciones.landing.*'],
-                    // ],
-                    // 'seccion_ocho' => [
-                    //     'label' => 'Sección ocho',
-                    //     'icon' => 'icon-upload',
-                    //     'url' => Backend::url('invitaciones/landing/seccionocho'),
-                    //     'permissions' => ['invitaciones.landing.*'],
-                    // ],
-                    // 'seccion_nueve' => [
-                    //     'label' => 'Sección nueve',
-                    //     'icon' => 'icon-upload',
-                    //     'url' => Backend::url('invitaciones/landing/seccionnueve'),
-                    //     'permissions' => ['invitaciones.landing.*'],
-                    // ],
+                ],
+            ],
+            'catalogos' => [
+                'label'       => 'Catalogos',
+                'url'         => Backend::url('invitaciones/landing/estatus'),
+                'icon'        => 'icon-leaf',
+                'permissions' => ['invitaciones.landing.catalogos.*'],
+                'order'       => 501,
+                'sideMenu' => [
+                    'seccion_uno' => [
+                        'label' => 'Catalogo de ESTATUS',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/estatus'),
+                        'permissions' => ['invitaciones.landing.catalogos.estatus.*'],
+                    ],
                 ],
             ],
         ];
@@ -196,6 +166,13 @@ class Plugin extends PluginBase
                     $c = new SeccionCuatro;
                     $l = $c->listEstatus('', '', '');
                     return $l[$it];
+                }
+            },
+            'getactive' => function ($ac){
+                if(isset($ac) && $ac){
+                    return 'Si';
+                } else {
+                    return 'No';
                 }
             }
         ];

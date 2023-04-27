@@ -20,7 +20,8 @@ columns:
         type: getmesa
     estatus:
         label: Estatus
-        type: getestatus
+        relation: cat_estatus
+        select: descripcion
     edit_invitacion:
         label: Editar
         type: partial

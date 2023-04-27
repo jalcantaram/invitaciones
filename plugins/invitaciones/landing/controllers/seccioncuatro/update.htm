@@ -11,24 +11,26 @@
         <div class="layout-row">
             <div class="layout-row">
                 <div class="form-widget form-elements layout">
-                    <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
-                        <button 
+                    <?php  if(isset($this->widget->form->data) && $this->widget->form->data->estatus != '5'): ?>
+                        <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
+                            <button 
+                                class="btn btn-sm btn-success"
+                                data-request="onSendInvitacion"
+                                data-request-confirm="Deseas enviar la invitación por correo electrónico?"
+                                data-stripe-load-indicator
+                                data-request-data="rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                                >Enviar correo de invitación</button>
+                        </div>
+                        <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
+                            <button 
                             class="btn btn-sm btn-success"
-                            data-request="onSendInvitacion"
-                            data-request-confirm="Deseas enviar la invitación por correo electrónico?"
+                            data-request="onSendWhatsAppInvitacion"
+                            data-request-confirm="Deseas enviar la invitación por whatsapp?"
                             data-stripe-load-indicator
-                            data-request-data="rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
-                            >Enviar correo de invitación</button>
-                    </div>
-                    <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
-                        <button 
-                        class="btn btn-sm btn-success"
-                        data-request="onSendWhatsAppInvitacion"
-                        data-request-confirm="Deseas enviar la invitación por whatsapp?"
-                        data-stripe-load-indicator
-                        data-request-data=" rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
-                        >Enviar whatsapp de invitación</button>
-                    </div>
+                            data-request-data=" rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                            >Enviar whatsapp de invitación</button>
+                        </div>
+                    <?php endif ?>
                 </div>
                 <br>
             </div>

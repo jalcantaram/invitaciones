@@ -69,7 +69,9 @@ class SeccionCuatro extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'cat_estatus' => ['Invitaciones\Landing\Models\Catalogos\Estatus', 'key' => 'estatus']
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

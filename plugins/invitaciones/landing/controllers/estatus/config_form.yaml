@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Estatus
+
+# Model Form Field configuration
+form: $/invitaciones/landing/models/catalogos/estatus/fields.yaml
+
+# Model Class name
+modelClass: Invitaciones\Landing\Models\Catalogos\Estatus
+
+# Default redirect location
+defaultRedirect: invitaciones/landing/estatus
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: invitaciones/landing/estatus/update/:id
+    redirectClose: invitaciones/landing/estatus
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: invitaciones/landing/estatus
+    redirectClose: invitaciones/landing/estatus
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
