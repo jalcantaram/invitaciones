@@ -9,6 +9,15 @@ fields:
         description: Titulo
         required: true
         type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    color_titulo:
+        label: Color de titulo del header
+        placeholder: Color de titulo
+        required: true
+        type: colorpicker
+        span: storm
+        cssClass: p-r-0 col-xs-6
     sub_titulo:
         label: Sub Titulo
         placeholder: Sub Titulo
