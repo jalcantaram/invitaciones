@@ -2,22 +2,4 @@
 #  Form Field Definitions
 # ===================================
 fields:
-    frase:
-        label: Frase
-        placeholder: Frase
-        description: Frase de novios
-        required: false
-        type: textarea
-        size: small
-    text_color:
-        label: Color de texto
-        placeholder: Color de texto
-        description: Color del texto de la frase
-        required: false
-        type: text
-    background_color:
-        label: Color de fondo
-        placeholder: Color de fondo
-        description: Color de fondo
-        required: false
-        type: text
+
