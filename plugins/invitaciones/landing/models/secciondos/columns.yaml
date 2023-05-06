@@ -3,9 +3,9 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    nombre_hotel:
+        label: NOMBRE DEL HOTEL
         searchable: true
-    frase:
-        label: FRASE
+    direccion:
+        label: DIRECCIÓN DEL HOTEL
         searchable: true

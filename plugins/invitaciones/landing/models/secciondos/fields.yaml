@@ -2,4 +2,51 @@
 #  Form Field Definitions
 # ===================================
 fields:
-
+    nombre_hotel:
+        label: Nombre del hotel
+        placeholder: Nombre del hotel
+        description: Nombre del hotel
+        required: true
+        type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    direccion:
+        label: Dirección del hotel
+        placeholder: Dirección del hotel
+        description: Dirección del hotel
+        required: true
+        type: text
+        span: storm
+        cssClass: p-r-0 col-xs-6
+    telefono:
+        label: Teléfono del hotel
+        placeholder: Teléfono del hotel
+        description: Teléfono del hotel
+        required: true
+        type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    link_maps:
+        label: Link de la ubicación del hotel
+        placeholder: Link de la ubicación del hotel
+        description: Link de la ubicación del hotel
+        required: true
+        type: text
+        span: storm
+        cssClass: p-r-0 col-xs-6
+    url_hotel:
+        label: Sitio web del hotel
+        placeholder: Sitio web del hotel
+        description: Sitio web del hotel
+        required: false
+        type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    codigo_reserva:
+        label: Código de reserva
+        placeholder: Código de reserva
+        description: Código de reserva
+        required: false
+        type: text
+        span: storm
+        cssClass: p-r-0 col-xs-6
