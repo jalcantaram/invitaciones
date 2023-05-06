@@ -121,6 +121,12 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/seccioncinco'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
+                    'seccion_dos' => [
+                        'label' => 'Sección de configuración (Hoteles recomendados)',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/secciondos'),
+                        'permissions' => ['invitaciones.landing.*'],
+                    ],
                 ],
             ],
             'catalogos' => [
