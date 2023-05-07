@@ -15,7 +15,7 @@ class SeccionDos extends ComponentBase
 
     public function dataSeccion()
     {
-        $secciondos = SeccionDosModel::first();
+        $secciondos = SeccionDosModel::all();
         return $secciondos;
     }
 }

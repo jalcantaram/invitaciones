@@ -27,7 +27,11 @@ class SeccionDos extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'nombre_hotel' => 'required',
+        'direccion' => 'required',
+        'telefono' => 'required',
+    ];
 
     /**
      * @var array Attributes to be cast to native types

@@ -1,1 +1,4 @@
-<h1 style="font-family: 'Tangerine', cursive; letter-spacing: 3px;font-weight: 400;color:{{secciondos.dataSeccion.text_color}}" class="display-1">{{ secciondos.dataSeccion.frase }}</h1>
+<h1 style="font-size: 46px; font-family: 'Great Vibes';color:#333" class="display-1">Hospedaje Recomendado</h1>
+{% for i, hospedaje in secciondos.dataSeccion %}
+    <p style="color: #333;">{{ hospedaje.nombre_hotel }}</p>
+{% endfor %}

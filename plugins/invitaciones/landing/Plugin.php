@@ -127,16 +127,7 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/secciondos'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
-                ],
-            ],
-            'catalogos' => [
-                'label'       => 'Catalogos',
-                'url'         => Backend::url('invitaciones/landing/estatus'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['invitaciones.landing.catalogos.*'],
-                'order'       => 501,
-                'sideMenu' => [
-                    'seccion_uno' => [
+                    'estatus' => [
                         'label' => 'Catalogo de ESTATUS',
                         'icon' => 'icon-upload',
                         'url' => Backend::url('invitaciones/landing/estatus'),
