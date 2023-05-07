@@ -76,12 +76,16 @@ function onStart(){
                         <li class="nav-item">
                             <a class="nav-link" href="#codigo-vestimenta">Código de vestimenta</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#fotos">Fotos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#hospedaje-recomendado">Hospedaje Recomendado</a>
-                        </li>
+                        {% if seccioncinco.dataSeccion|length > 0 %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#fotos">Fotos</a>
+                            </li>
+                        {% endif %}
+                        {% if secciondos.dataSeccion|length > 0 %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hospedaje-recomendado">Hospedaje Recomendado</a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -385,8 +389,8 @@ function onStart(){
             </section><!-- header close -->
         {% endif %}
 
-        <!-- SECCIONDOS -->
-        {% if secciondos.dataSeccion %}
+        <!-- SECCIONDOS HOSPEDAJE RECOMENDADO -->
+        {% if secciondos.dataSeccion|length > 0 %}
             <section class="min-vh-100" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
                 <div class="container mt-5 mb-5">
                     <div class="row">
