@@ -70,17 +70,6 @@ function onStart(){
                         <li class="nav-item">
                             <a class="nav-link" href="#dondeycuando">Dónde & Cuándo</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#hospedaje">Hospedaje</a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#dresscode">Código de vestimenta</a>
-                        </li> -->
-                        <!-- MEDIA (FOTOS, VIDEO y REDES SOCIALES) -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#padrinos">Padrinos</a>
-                        </li> -->
-                        <!-- MESA DE REGALOS, LUNA DE MIEL (CUENTA BANCO) -->
                         <li class="nav-item">
                             <a class="nav-link" href="#asistencia">Confirmar asistencia</a>
                         </li>
@@ -355,10 +344,10 @@ function onStart(){
         </section>
 
         <!-- SECCIONSEIS -->
-        <section class="hero-area bg-1" id="codigo-vestimenta" style="background-color: #ededf5;">
+        <section class="min-vh-100" id="codigo-vestimenta" style="background-color: #ededf5;display: flex;align-items: center;flex-wrap: nowrap;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 mt-5 mb-5">
                         <div class="text-center">
                             <h1 class="title-seccion-dos display-1">Código de Vestimenta</h1>
                             <div class="container text-center">
@@ -381,9 +370,20 @@ function onStart(){
         </section><!-- header close -->
 
         <!-- SECCIONCINCO -->
-        <section class="" id="fotos" style="padding: 64px 0;background: #f9f4ef">
-            {% component 'seccioncinco' %}
-        </section><!-- header close -->
+        {% if seccioncinco.dataSeccion|length > 0 %}
+            <section class="min-vh-100" id="fotos" style="padding: 64px 0;background: #f9f4ef;display: flex;align-items: center;flex-wrap: nowrap;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mt-5 mb-5">
+                            <div class="text-center">
+                                <h1 class="display-1 title-seccion-dos">Galería de fotos</h1>
+                            </div>
+                        </div>
+                    </div>
+                    {% component 'seccioncinco' %}
+                </div>
+            </section><!-- header close -->
+        {% endif %}
 
         <!-- SECCIONDOS -->
         {% if secciondos.dataSeccion %}
@@ -407,108 +407,6 @@ function onStart(){
                         <div class="col-md-12">
                             <div class="text-center" style="color:{{ seccionsiete.dataSeccion.text_color}}">
                             {% component 'seccionsiete' %}
-                            </div>
-                        </div>
-                        <!--
-                            <div class="col-md-5 wow zoomIn">
-                                <div class="block">
-                                    <div class="counter text-center">
-                                        <ul id="countdown_dashboard">
-                                            <li>
-                                                <div class="dash days_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Days</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash hours_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Hours</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash minutes_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Minutes</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash seconds_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Seconds</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        -->
-                    </div><!-- .row close -->
-                </div><!-- .container close -->
-            </section><!-- header close -->
-
-            <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccionocho.dataSeccion.background_color}};">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center" style="color:{{ seccionocho.dataSeccion.text_color}}">
-                            {% component 'seccionocho' %}
-                            </div>
-                        </div>
-                        <!--
-                            <div class="col-md-5 wow zoomIn">
-                                <div class="block">
-                                    <div class="counter text-center">
-                                        <ul id="countdown_dashboard">
-                                            <li>
-                                                <div class="dash days_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Days</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash hours_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Hours</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash minutes_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Minutes</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="dash seconds_dash">
-                                                    <div class="digit">0</div>
-                                                    <div class="digit">0</div>
-                                                    <span class="dash_title">Seconds</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        -->
-                    </div><!-- .row close -->
-                </div><!-- .container close -->
-            </section><!-- header close -->
-
-            <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccionnueve.dataSeccion.background_color}};">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center" style="color:{{ seccionnueve.dataSeccion.text_color}}">
-                            {% component 'seccionnueve' %}
                             </div>
                         </div>
                         <!--
