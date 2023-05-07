@@ -73,6 +73,8 @@ class SeccionDos extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'img_hotel' => 'System\Models\File'
+    ];
     public $attachMany = [];
 }

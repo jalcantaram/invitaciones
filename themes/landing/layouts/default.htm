@@ -358,8 +358,8 @@ function onStart(){
 
         <!-- SECCIODOS -->
         {% if secciondos.dataSeccion %}
-            <section class="hero-area bg-1" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
-                <div class="container">
+            <section class="min-vh-100" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
+                <div class="container mt-5 mb-5">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center">
@@ -601,7 +601,7 @@ function onStart(){
         <script type='text/javascript'>
             contador('{{secciontres.dataSeccion.fecha_celebracion}}');
 
-            var swiper = new Swiper(".mySwiper", {
+            var seccionCinco = new Swiper(".seccion-cinco", {
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
@@ -616,6 +616,29 @@ function onStart(){
                 pagination: {
                     el: ".swiper-pagination",
                 },
+            });
+
+            var seccionDos = new Swiper(".seccion-dos", {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                autoHeight: true,
+                autoplay: {
+                    delay: 18000,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    "@0.00": {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    "@1.00": {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                }
             });
         </script>
         {% if has_audio %}

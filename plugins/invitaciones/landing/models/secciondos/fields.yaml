@@ -49,3 +49,21 @@ fields:
         type: text
         span: storm
         cssClass: col-xs-6
+    img_hotel:
+        label: Imagen de hotel
+        placeholder: Imagen de hotel
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        span: full
+        imageHeight: 350
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 75
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: full
