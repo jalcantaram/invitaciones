@@ -1,4 +1,50 @@
-<h1 style="font-size: 46px; font-family: 'Great Vibes';color:#333" class="display-1">Hospedaje Recomendado</h1>
-{% for i, hospedaje in secciondos.dataSeccion %}
-    <p style="color: #333;">{{ hospedaje.nombre_hotel }}</p>
-{% endfor %}
+<h1 class="display-1 title-seccion-dos">Hospedaje Recomendado</h1>
+<div class="col-sm-12">
+    <div class="swiper seccion-dos animate__animated animate__pulse">
+        <div class="swiper-wrapper">
+            {% for i, hospedaje in secciondos.dataSeccion %}
+                <div class="swiper-slide">
+                    <div class="card mb-4 card-seccion-dos">
+                        {% if hospedaje.img_hotel %}
+                            <img src="{{ hospedaje.img_hotel.path }}" class="card-img-top img-card-seccion-dos">
+                        {% else %}
+                            <img src="/storage/app/uploads/public/645/74e/423/thumb_2_300_0_0_0_crop.png" class="card-img-top img-card-seccion-dos">
+                        {% endif %}
+                        
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                <strong>Nombre: </strong> {{ hospedaje.nombre_hotel }}
+                            </h6>
+                            <h6 class="card-title">
+                                <strong>Dirección: </strong> {{ hospedaje.direccion }}
+                            </h6>
+                            <h6 class="card-title">
+                                <strong>Teléfono: </strong> {{ hospedaje.telefono }}
+                            </h6>
+                            <hr>
+                            {% if hospedaje.link_maps %}
+                                <h6 class="card-title">
+                                    <strong>Mapa: </strong> <a href="{{ hospedaje.link_maps }}" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
+                                </h6>
+                            {% endif %}
+                            {% if hospedaje.url_hotel %}
+                                <h6 class="card-title">
+                                    <strong>Sitio web: </strong> <a href="{{ hospedaje.url_hotel }}" target="_blank" rel="noopener noreferrer">Ver página web</a>
+                                </h6>
+                            {% endif %}
+                            {% if hospedaje.codigo_reserva %}
+                                <h6 class="card-title">
+                                    <strong>Código de reserva: </strong> {{ hospedaje.codigo_reserva }}
+                                </h6>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+

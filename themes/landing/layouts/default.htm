@@ -85,6 +85,9 @@ function onStart(){
                             <a class="nav-link" href="#asistencia">Confirmar asistencia</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#codigo-vestimenta">Código de vestimenta</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#fotos">Fotos</a>
                         </li>
                         <li class="nav-item">
@@ -351,15 +354,41 @@ function onStart(){
             {% endif %}
         </section>
 
+        <!-- SECCIONSEIS -->
+        <section class="hero-area bg-1" id="codigo-vestimenta" style="background-color: #ededf5;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h1 class="title-seccion-dos display-1">Código de Vestimenta</h1>
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <img class="img-fluid" src="{{ 'assets/images/mujeres.jpg' | theme }}">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <img class="img-fluid" src="{{ 'assets/images/hombres.jpg' | theme }}">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <img class="img-fluid" src="{{ 'assets/images/accesorios.jpg' | theme }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .row close -->
+            </div><!-- .container close -->
+        </section><!-- header close -->
+
         <!-- SECCIONCINCO -->
         <section class="" id="fotos" style="padding: 64px 0;background: #f9f4ef">
             {% component 'seccioncinco' %}
         </section><!-- header close -->
 
-        <!-- SECCIODOS -->
+        <!-- SECCIONDOS -->
         {% if secciondos.dataSeccion %}
-            <section class="hero-area bg-1" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
-                <div class="container">
+            <section class="min-vh-100" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
+                <div class="container mt-5 mb-5">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center">
@@ -370,30 +399,7 @@ function onStart(){
                 </div><!-- .container close -->
             </section><!-- header close -->
         {% endif %}
-            <section class="hero-area bg-1" id="codigo-vestimenta" style="background-color: #ededf5;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <h1 class="title-seccion-dos display-1">Código de Vestimenta</h1>
-                                <div class="container text-center">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <img class="img-fluid" src="{{ 'assets/images/mujeres.jpg' | theme }}">
-                                      </div>
-                                      <div class="col-md-4">
-                                        <img class="img-fluid" src="{{ 'assets/images/hombres.jpg' | theme }}">
-                                      </div>
-                                      <div class="col-md-4">
-                                        <img class="img-fluid" src="{{ 'assets/images/accesorios.jpg' | theme }}">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- .row close -->
-                </div><!-- .container close -->
-            </section><!-- header close -->
+
         {#
             <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccionsiete.dataSeccion.background_color}};">
                 <div class="container">
@@ -573,7 +579,7 @@ function onStart(){
         <script type='text/javascript'>
             contador('{{secciontres.dataSeccion.fecha_celebracion}}');
 
-            var swiper = new Swiper(".mySwiper", {
+            var seccionCinco = new Swiper(".seccion-cinco", {
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
@@ -588,6 +594,29 @@ function onStart(){
                 pagination: {
                     el: ".swiper-pagination",
                 },
+            });
+
+            var seccionDos = new Swiper(".seccion-dos", {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                autoHeight: true,
+                autoplay: {
+                    delay: 18000,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    "@0.00": {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    "@1.00": {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                }
             });
         </script>
         {% if has_audio %}

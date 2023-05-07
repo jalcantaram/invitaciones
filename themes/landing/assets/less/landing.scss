@@ -513,8 +513,37 @@ html {
     height:32px
 }
 
-
 audio:not([controls]) {
     display: none;
     height: 0;
-  }
+}
+
+.card-seccion-dos .card-body {
+    height: 320px;
+    overflow-y: scroll;
+}
+.card-seccion-dos .card-body::-webkit-scrollbar {
+    width: 10px;
+}
+.card-seccion-dos .card-body::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 3px;
+}
+.card-seccion-dos{
+    margin: 0px auto;
+    max-width: 400px;
+    color: #333 !important;
+    text-align: justify !important;
+}
+.title-seccion-dos{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color:#333 !important;
+}
+.img-card-seccion-dos{
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+}
