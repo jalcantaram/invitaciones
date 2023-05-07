@@ -9,7 +9,7 @@ fields:
         required: true
         type: text
         span: storm
-        cssClass: p-l-0 col-xs-6
+        cssClass: col-xs-6
     direccion:
         label: Dirección del hotel
         placeholder: Dirección del hotel
@@ -25,15 +25,14 @@ fields:
         required: true
         type: text
         span: storm
-        cssClass: p-l-0 col-xs-6
+        cssClass: col-xs-6
     link_maps:
         label: Link de la ubicación del hotel
         placeholder: Link de la ubicación del hotel
         description: Link de la ubicación del hotel
-        required: true
         type: text
         span: storm
-        cssClass: p-r-0 col-xs-6
+        cssClass: col-xs-6
     url_hotel:
         label: Sitio web del hotel
         placeholder: Sitio web del hotel
@@ -41,7 +40,7 @@ fields:
         required: false
         type: text
         span: storm
-        cssClass: p-l-0 col-xs-6
+        cssClass: col-xs-6
     codigo_reserva:
         label: Código de reserva
         placeholder: Código de reserva
@@ -49,4 +48,4 @@ fields:
         required: false
         type: text
         span: storm
-        cssClass: p-r-0 col-xs-6
+        cssClass: col-xs-6

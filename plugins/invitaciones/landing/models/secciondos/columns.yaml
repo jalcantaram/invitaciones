@@ -9,3 +9,6 @@ columns:
     direccion:
         label: DIRECCIÓN DEL HOTEL
         searchable: true
+    telefono:
+        label: TELÉFONO
+        searchable: true

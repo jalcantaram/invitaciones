@@ -81,14 +81,14 @@ function onStart(){
                             <a class="nav-link" href="#padrinos">Padrinos</a>
                         </li> -->
                         <!-- MESA DE REGALOS, LUNA DE MIEL (CUENTA BANCO) -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#mesaderegalos">Mesa de regalos</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="#asistencia">Confirmar asistencia</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#fotos">Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hospedaje-recomendado">Hospedaje Recomendado</a>
                         </li>
                     </ul>
                 </div>
@@ -109,21 +109,6 @@ function onStart(){
                 </div><!-- .row close -->
             </div><!-- .container close -->
         </section><!-- header close -->
-
-        <!-- SECCIODOS -->
-        {% if secciondos.dataSeccion %}
-            <section class="hero-area bg-1" id="frase" style="background-color: {{secciondos.dataSeccion.background_color}};">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                {% component "secciondos" %}
-                            </div>
-                        </div>
-                    </div><!-- .row close -->
-                </div><!-- .container close -->
-            </section><!-- header close -->
-        {% endif %}
 
         <!-- SECCIONTRES -->
         <div id="dondeycuando" class="w-100">
@@ -370,6 +355,21 @@ function onStart(){
         <section class="" id="fotos" style="padding: 64px 0;background: #f9f4ef">
             {% component 'seccioncinco' %}
         </section><!-- header close -->
+
+        <!-- SECCIODOS -->
+        {% if secciondos.dataSeccion %}
+            <section class="hero-area bg-1" id="hospedaje-recomendado" style="background-image: url({{ 'assets/images/background_seccion_dos.jpg' | theme }});background-repeat: no-repeat;background-position: center center;background-size: cover; background-color: #252c4a; position: relative;overflow: hidden;display: flex;align-items: center;flex-wrap: nowrap;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                {% component "secciondos" %}
+                            </div>
+                        </div>
+                    </div><!-- .row close -->
+                </div><!-- .container close -->
+            </section><!-- header close -->
+        {% endif %}
 
         {#
             <section class="hero-area bg-1" id="hospedaje" style="background-color: {{ seccionseis.dataSeccion.background_color}};">
