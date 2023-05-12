@@ -140,8 +140,7 @@ function onStart(){
                             <div class="divisor"></div>
                             <span>X</span>
                         </div>
-                        <h4>Confirma tu asistencia</h4>
-                        <p class="ninos">Evento con adolescentes mayores de 12 años.</p>
+                        <h4>Confirma tu Asistencia</h4>
                         <div class="row">
                             <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" value="{{ sc['nombre_completo'] }}" readonly disabled>
                         </div>
@@ -206,14 +205,12 @@ function onStart(){
                         </div>
                     </div>
                     <div id="confirmacionPartial">
-
                         <div class="iniciales">
                             <span>G</span>
                             <div class="divisor"></div>
                             <span>X</span>
                         </div>
                         <h4>Hola <strong>{{ sc['nombre_completo'] }}</strong>, agradecemos por confirmar tu asistencia.</h4>
-                        <p class="ninos">Evento con adolescentes mayores de 12 años.</p>
                         <div class="row">
                             <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" value="{{ sc['nombre_completo'] }}" readonly disabled>
                         </div>
@@ -275,7 +272,7 @@ function onStart(){
                             <span>X</span>
                         </div>
                         <br>
-                        <h4>Gracias, código NO valido.</h4>
+                        <h4>Código NO valido.</h4>
                         <br>
                     </div>
                 </form>
@@ -300,8 +297,7 @@ function onStart(){
                             <div class="divisor"></div>
                             <span>X</span>
                         </div>
-                        <h4>Confirma tu asistencia</h4>
-                        <p class="ninos">Evento con adolescentes mayores de 12 años.</p>
+                        <h4>Confirma tu Asistencia</h4>
                         <div class="row">
                             <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" readonly disabled>
                         </div>
@@ -347,7 +343,7 @@ function onStart(){
                             <textarea type="text" placeholder="· Dedica un mensaje..." class="deseos-invitados mb-1" name="mensaje"></textarea>
                             <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="mensaje"></div>
                         </div>
-                        <button type="submit" class="btn-grl">Confirmar</button>
+                        <button type="button" class="btn-grl">Confirmar</button>
                     </div>
                 </form>
             {% endif %}
@@ -386,7 +382,7 @@ function onStart(){
                     <div class="row">
                         <div class="col-md-12 mt-5 mb-5">
                             <div class="text-center">
-                                <h1 class="display-1 title-seccion-dos">Galería de fotos</h1>
+                                <h1 class="display-1 title-seccion-dos">Galería de Fotos</h1>
                             </div>
                         </div>
                     </div>
@@ -416,19 +412,24 @@ function onStart(){
                 <div class="row">
                     <div class="col-md-12 mt-5 mb-5">
                         <div class="text-center">
-                            <h1 class="display-1 title-seccion-dos">Mesa de regalos</h1>
+                            <h1 class="display-1 title-seccion-dos">Mesa de Regalos</h1>
+                        </div>
+                        <div class="text-center">
+                            <p class="display-3 sub-title-seccion-dos">El mejor regalo que podemos recibir es que nos acompañes en el día más importante de nuestras vidas, pero si gustas regalarnos algo, aqui te dejamos un par de opciones:</p>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="card col-md-4 mx-2">
-                        <div class="card-body text-center">
-                            <a target="_blank" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51147759"><img width="90%" src="{{ 'assets/images/liverpool.png' | theme }}"></a>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="card col-md-4 mx-2">
+                            <div class="card-body text-center">
+                                <a target="_blank" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51147759"><img width="90%" src="{{ 'assets/images/liverpool.png' | theme }}"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card col-md-4 mx-2">
-                        <div class="card-body text-center">
-                            <a target="_blank" href="https://www.elpalaciodehierro.com/buscar?eventId=377219"><img width="80%" src="{{ 'assets/images/palaciohierro.png' | theme }}"></a>
+                        <div class="card col-md-4 mx-2">
+                            <div class="card-body text-center">
+                                <a target="_blank" href="https://www.elpalaciodehierro.com/buscar?eventId=377219"><img width="80%" src="{{ 'assets/images/palaciohierro.png' | theme }}"></a>
+                            </div>
                         </div>
                     </div>
                 </div>

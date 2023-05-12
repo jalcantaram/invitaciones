@@ -54,5 +54,11 @@
     .contador-container>div {
         font-size: 30px;
     }
+}
 
+@media (min-width: 415px) and (max-width: 450px){
+    .iniciales {
+        right: 5px;
+        top: 10px;
+    }
 }

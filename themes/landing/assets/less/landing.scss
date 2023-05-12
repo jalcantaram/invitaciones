@@ -342,7 +342,7 @@ html {
 .iniciales {
     border: 1px solid #707070;
     right: 40px;
-    top: 30px;
+    top: 10px;
     border-radius: 6px;
     padding: 7px;
     text-align: center;
@@ -541,6 +541,15 @@ audio:not([controls]) {
     letter-spacing: 3px;
     font-family: 'Great Vibes';
     color:#333 !important;
+}
+.sub-title-seccion-dos{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: var(--fuente-textos);
+    color: #333 !important;
+    font-style: italic;
+    line-height: normal;
 }
 .img-card-seccion-dos{
     width: 100% !important;
