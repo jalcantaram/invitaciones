@@ -68,6 +68,9 @@ function onStart(){
                 <div class="collapse navbar-collapse justify-content-end" id="menuItems">
                     <ul class="navbar-nav" id="top-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#dondeycuando">Dónde & Cuándo</a>
                         </li>
                         <li class="nav-item">
@@ -86,13 +89,16 @@ function onStart(){
                                 <a class="nav-link" href="#hospedaje-recomendado">Hospedaje Recomendado</a>
                             </li>
                         {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mesa-regalos">Mesa de regalos</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- SECCIOUNO -->
-        <section class="hero-area {% if not seccionuno.dataSeccion.background %} bg-1 {% endif %}" {% if seccionuno.dataSeccion.background %} style="background-image: url({{seccionuno.dataSeccion.background.path}});background-repeat: no-repeat;background-position: center;background-size: cover;" {% endif %}>
+        <section id="inicio" class="hero-area {% if not seccionuno.dataSeccion.background %} bg-1 {% endif %}" {% if seccionuno.dataSeccion.background %} style="background-image: url({{seccionuno.dataSeccion.background.path}});background-repeat: no-repeat;background-position: center;background-size: cover;" {% endif %}>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
