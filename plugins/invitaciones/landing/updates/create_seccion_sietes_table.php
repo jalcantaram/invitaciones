@@ -11,6 +11,10 @@ class CreateSeccionSietesTable extends Migration
         Schema::create('invitaciones_landing_seccion_sietes', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('nombre_papa_novio')->nullable();
+            $table->string('nombre_mama_novio')->nullable();
+            $table->string('nombre_papa_novia')->nullable();
+            $table->string('nombre_mama_novia')->nullable();
             $table->timestamps();
         });
     }

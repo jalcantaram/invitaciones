@@ -3,6 +3,107 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    nombre_papa_novio:
+        label: Nombre del papá del novio
+        placeholder: Nombre completo
+        description: Nombre completo del papá del novio
+        required: true
+        type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    nombre_mama_novio:
+        label: Nombre de la mamá del novio
+        placeholder: Nombre completo
+        description: Nombre completo de la mamá del novio
+        required: true
+        type: text
+        span: storm
+        cssClass: p-r-0 col-xs-6
+    nombre_papa_novia:
+        label: Nombre del papá de la novia
+        placeholder: Nombre completo
+        description: Nombre completo del papá de la novia
+        required: true
+        type: text
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    nombre_mama_novia:
+        label: Nombre de la mamá de la novia
+        placeholder: Nombre completo
+        description: Nombre completo de la mamá de la novia
+        required: true
+        type: text
+        span: storm
+        cssClass: p-r-0 col-xs-6
+    foto_papa_novio:
+        label: Foto del papá del novio
+        placeholder: Foto del papá del novio
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 350
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 75
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    foto_mama_novio:
+        label: Foto de la mamá del novio
+        placeholder: Foto de la mamá del novio
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 350
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 75
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: storm
+        cssClass: p-r-0 col-xs-6
+    foto_papa_novia:
+        label: Foto del papá de la novia
+        placeholder: Foto del papá de la novia
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 350
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 75
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: storm
+        cssClass: p-l-0 col-xs-6
+    foto_mama_novia:
+        label: Foto de la mamá de la novia
+        placeholder: Foto de la mamá de la novia
+        type: fileupload
+        fileTypes: .jpg, .png
+        mode: image
+        imageHeight: 350
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 75
+            sharpen: 0
+            interlace: false
+            extension: auto
+        span: storm
+        cssClass: p-r-0 col-xs-6

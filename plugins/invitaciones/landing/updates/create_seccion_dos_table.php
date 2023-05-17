@@ -14,6 +14,15 @@ class CreateSeccionDosTable extends Migration
             $table->text('frase')->nullable();
             $table->string('text_color');
             $table->string('background_color');
+            $table->dropColumn('frase');
+            $table->dropColumn('text_color');
+            $table->dropColumn('background_color');
+            $table->string('nombre_hotel')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('link_maps')->nullable();
+            $table->string('url_hotel')->nullable();
+            $table->string('codigo_reserva')->nullable();
             $table->timestamps();
         });
     }

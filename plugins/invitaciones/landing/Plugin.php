@@ -127,6 +127,12 @@ class Plugin extends PluginBase
                         'url' => Backend::url('invitaciones/landing/secciondos'),
                         'permissions' => ['invitaciones.landing.*'],
                     ],
+                    'seccion_siete' => [
+                        'label' => 'Sección de configuración (Padres de los novios)',
+                        'icon' => 'icon-upload',
+                        'url' => Backend::url('invitaciones/landing/seccionsiete'),
+                        'permissions' => ['invitaciones.landing.*'],
+                    ],
                     'estatus' => [
                         'label' => 'Catalogo de ESTATUS',
                         'icon' => 'icon-upload',
