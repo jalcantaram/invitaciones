@@ -22,12 +22,17 @@ class SeccionSiete extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['*' ];
 
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'nombre_papa_novio' => 'required',
+        'nombre_mama_novio' => 'required',
+        'nombre_papa_novia' => 'required',
+        'nombre_mama_novia' => 'required',
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -69,6 +74,11 @@ class SeccionSiete extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'foto_papa_novio' => 'System\Models\File',
+        'foto_mama_novio' => 'System\Models\File',
+        'foto_papa_novia' => 'System\Models\File',
+        'foto_mama_novia' => 'System\Models\File',
+    ];
     public $attachMany = [];
 }

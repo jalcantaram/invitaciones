@@ -3,6 +3,15 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    nombre_mama_novia:
+        label: NOMBRE DE LA MAMÁ DE LA NOVIA
+        searchable: true
+    nombre_mama_novio:
+        label: NOMBRE DE LA MAMÁ DEL NOVIO
+        searchable: true
+    nombre_papa_novia:
+        label: NOMBRE DEL PAPÁ DE LA NOVIA
+        searchable: true
+    nombre_papa_novio:
+        label: NOMBRE DEL PAPÁ DEL NOVIO
         searchable: true
