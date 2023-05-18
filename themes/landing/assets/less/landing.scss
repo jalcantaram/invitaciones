@@ -64,7 +64,7 @@ html {
     -ms-transition: all 0.3s ease-in-out 0s !important;
     -o-transition: all 0.3s ease-in-out 0s !important;
     transition: all 0.3s ease-in-out 0s !important;
-    padding: 10px 50px !important;
+    padding: 10px 20px !important;
     margin: 0 !important;
     border: 0 !important;
 }
@@ -97,12 +97,6 @@ html {
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    position: absolute;
-    bottom: var(--circulo-pos-full-bottom);
-    top: var(--circulo-pos-full-top);
-    z-index: 5;
-    left: 50%;
-    margin-left: -160px;
     text-align: center;
     p{
         font-family: 'Great Vibes', cursive;

@@ -28,19 +28,23 @@ class SeccionTres extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
+        'fecha_celebracion' => 'required',
+        'subtitulo_coctel' => 'required',
+        'donde_coctel' => 'required',
+        'hora_coctel' => 'required',
+        'link_googlemaps_coctel' => 'required',
+        'foto_lugar_coctel' => 'required',
         'subtitulo_ceremonia' => 'required',
         'donde_ceremonia' => 'required',
-        'cuando_ceremonia' => 'nullable',
         'hora_ceremonia' => 'required',
         'link_googlemaps_ceremonia' => 'required',
-        'subtitulo_recepcion' => 'required',
-        'donde_recepcion' => 'required',
-        'cuando_recepcion' => 'nullable',
-        'hora_recepcion' => 'required',
-        'link_googlemaps_recepcion' => 'required',
-        'text_color' => 'nullable',
-        'background_color' => 'nullable',
-        'fecha_celebracion' => 'required',
+        'foto_lugar_ceremonia' => 'required',
+        'subtitulo_cena' => 'required',
+        'donde_cena' => 'required',
+        'hora_cena' => 'required',
+        'link_googlemaps_cena' => 'required',
+        'foto_lugar_cena' => 'required',
+        
     ];
 
     /**
@@ -84,10 +88,9 @@ class SeccionTres extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-        'foto_novio' => 'System\Models\File',
-        'foto_novia' => 'System\Models\File',
-        'imagen_ceremonia' => 'System\Models\File',
-        'imagen_recepcion' => 'System\Models\File',
+        'foto_lugar_coctel' => 'System\Models\File',
+        'foto_lugar_ceremonia' => 'System\Models\File',
+        'foto_lugar_cena' => 'System\Models\File',
     ];
     public $attachMany = [];
 }
