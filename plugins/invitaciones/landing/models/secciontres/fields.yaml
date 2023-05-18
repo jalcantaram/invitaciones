@@ -2,114 +2,6 @@
 #  Form Field Definitions
 # ===================================
 fields:
-    subtitulo_ceremonia:
-        label: Nombre del lugar donde será la ceremonia
-        placeholder: Nombre del lugar donde será la ceremonia
-        description: Ej. "Finca San Javier"
-        required: true
-        type: text
-        span: storm
-        cssClass: p-l-0 col-xs-6
-    subtitulo_recepcion:
-        label: Nombre del lugar donde será la recepción
-        placeholder: Nombre del lugar donde será la recepción
-        description: Ej. "Finca San Javier"
-        required: true
-        type: text
-        span: storm
-        cssClass: p-r-0 col-xs-6
-    donde_ceremonia:
-        label: Dirección del lugar donde será la ceremonia
-        placeholder: Dirección del lugar donde será la ceremonia
-        description: Dirección del lugar donde será la ceremonia
-        required: true
-        type: text
-        span: storm
-        cssClass: p-l-0 col-xs-6
-    donde_recepcion:
-        label: Dirección del lugar donde será la recepción
-        placeholder: Dirección del lugar donde será la recepción
-        description: Dirección del lugar donde será la recepción
-        required: true
-        type: text
-        span: storm
-        cssClass: p-r-0 col-xs-6
-    hora_ceremonia: 
-        label: Hora de la ceremonia
-        placeholder: Hora de la ceremonia
-        description: Hora de la ceremonia
-        required: true
-        type: datepicker
-        mode: time
-        span: storm
-        cssClass: p-l-0 col-xs-6
-    hora_recepcion:
-        label: Hora de la recepción
-        placeholder: Hora de la recepción
-        description: Hora de la recepción
-        required: true
-        type: datepicker
-        mode: time
-        span: storm
-        cssClass: p-r-0 col-xs-6
-    link_googlemaps_ceremonia: 
-        label: Link de google maps para saber llegar a la ceremonia
-        placeholder: Link de google maps para saber llegar a la ceremonia
-        description: Link de google maps para saber llegar a la ceremonia
-        required: true
-        type: text
-        span: storm
-        cssClass: p-l-0 col-xs-6
-    link_googlemaps_recepcion:
-        label: Link de google maps para saber llegar a la recepción
-        placeholder: Link de google maps para saber llegar a la recepción
-        description: Link de google maps para saber llegar a la recepción
-        required: true
-        type: text
-        span: storm
-        cssClass: p-r-0 col-xs-6
-    foto_novia:
-        label: Foto de la novia
-        placeholder: Foto de la novia
-        description: Foto de la novia
-        required: true
-        type: fileupload
-        fileTypes: .jpg, .png
-        mode: image
-        imageHeight: 260
-        imageWidth: 260
-        thumbOptions:
-            mode: crop
-            offset:
-                - 0
-                - 0
-            quality: 90
-            sharpen: 0
-            interlace: false
-            extension: auto
-        span: storm
-        cssClass: p-l-0 col-xs-6
-    foto_novio:
-        label: Foto del novio
-        placeholder: Foto del novio
-        description: Foto del novio
-        required: true
-        type: fileupload
-        fileTypes: .jpg, .png
-        mode: image
-        imageHeight: 260
-        imageWidth: 260
-        thumbOptions:
-            mode: crop
-            offset:
-                - 0
-                - 0
-            quality: 90
-            sharpen: 0
-            interlace: false
-            extension: auto
-        span: storm
-        cssClass: p-r-0 col-xs-6
     fecha_celebracion:
         label: Fecha de la celebración
         placeholder: Fecha de la celebración
@@ -117,3 +9,197 @@ fields:
         required: true
         type: datepicker
         span: full
+tabs:
+    stretch: true
+    defaultTab: Coctel
+    cssClass: text-blue
+    lazy:
+        - Ceremonia
+        - Cena
+    paneCssClass:
+        0: coctel-tab
+        1: ceremonia-tab
+        2: cena-tab
+    icons:
+        Coctel: icon-user
+        Ceremonia: icon-group
+        Cena: icon-group
+    fields:
+        subtitulo_coctel:
+            label: Nombre del lugar donde será la coctel
+            placeholder: Nombre del lugar donde será la coctel
+            description: Ej. "Finca San Javier"
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Coctel
+        donde_coctel:
+            label: Dirección del lugar donde será la coctel
+            placeholder: Dirección del lugar donde será la coctel
+            description: Dirección del lugar donde será la coctel
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Coctel
+        hora_coctel:
+            label: Hora de la coctel
+            placeholder: Hora de la coctel
+            description: Hora de la coctel
+            required: true
+            type: datepicker
+            mode: time
+            span: storm
+            cssClass: col-xs-6
+            tab: Coctel
+        link_googlemaps_coctel:
+            label: Link de google maps para saber llegar a la coctel
+            placeholder: Link de google maps para saber llegar a la coctel
+            description: Link de google maps para saber llegar a la coctel
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Coctel
+        foto_lugar_coctel:
+            label: Foto del lugar donde será el coctel
+            placeholder: Foto del lugar donde será el coctel
+            description: Foto del lugar donde será el coctel
+            required: true
+            type: fileupload
+            fileTypes: .jpg, .png
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+            span: storm
+            cssClass: col-xs-6
+            tab: Coctel
+        subtitulo_ceremonia:
+            label: Nombre del lugar donde será la ceremonia
+            placeholder: Nombre del lugar donde será la ceremonia
+            description: Ej. "Finca San Javier"
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Ceremonia
+        donde_ceremonia:
+            label: Dirección del lugar donde será la ceremonia
+            placeholder: Dirección del lugar donde será la ceremonia
+            description: Dirección del lugar donde será la ceremonia
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Ceremonia
+        hora_ceremonia:
+            label: Hora de la ceremonia
+            placeholder: Hora de la ceremonia
+            description: Hora de la ceremonia
+            required: true
+            type: datepicker
+            mode: time
+            span: storm
+            cssClass: col-xs-6
+            tab: Ceremonia
+        link_googlemaps_ceremonia:
+            label: Link de google maps para saber llegar a la ceremonia
+            placeholder: Link de google maps para saber llegar a la ceremonia
+            description: Link de google maps para saber llegar a la ceremonia
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Ceremonia
+        foto_lugar_ceremonia:
+            label: Foto del lugar donde será la ceremonia
+            placeholder: Foto del lugar donde será la ceremonia
+            description: Foto del lugar donde será la ceremonia
+            required: true
+            type: fileupload
+            fileTypes: .jpg, .png
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+            span: storm
+            cssClass: col-xs-6
+            tab: Ceremonia
+        subtitulo_cena:
+            label: Nombre del lugar donde será la cena
+            placeholder: Nombre del lugar donde será la cena
+            description: Ej. "Finca San Javier"
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Cena
+        donde_cena:
+            label: Dirección del lugar donde será la cena
+            placeholder: Dirección del lugar donde será la cena
+            description: Dirección del lugar donde será la cena
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Cena
+        hora_cena:
+            label: Hora de la cena
+            placeholder: Hora de la cena
+            description: Hora de la cena
+            required: true
+            type: datepicker
+            mode: time
+            span: storm
+            cssClass: col-xs-6
+            tab: Cena
+        link_googlemaps_cena:
+            label: Link de google maps para saber llegar a la cena
+            placeholder: Link de google maps para saber llegar a la cena
+            description: Link de google maps para saber llegar a la cena
+            required: true
+            type: text
+            span: storm
+            cssClass: col-xs-6
+            tab: Cena
+        foto_lugar_cena:
+            label: Foto del lugar donde será la cena
+            placeholder: Foto del lugar donde será la cena
+            description: Foto del lugar donde será la cena
+            required: true
+            type: fileupload
+            fileTypes: .jpg, .png
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+            span: storm
+            cssClass: col-xs-6
+            tab: Cena
+
