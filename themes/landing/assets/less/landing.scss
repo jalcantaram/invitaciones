@@ -550,3 +550,86 @@ audio:not([controls]) {
     height: 100px !important;
     object-fit: cover !important;
 }
+
+.seccion-cod-vest{
+    background-color: #ededf5;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.title-seccion-cod-vest{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color: #4d4d4d !important;
+}
+
+.seccion-fotos{
+    padding: 64px 0;
+    background: #f9f4ef;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.title-seccion-fotos{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color: #4d4d4d !important;
+}
+
+.seccion-hospedaje{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-color: #252c4a; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.seccion-mesa{
+    background-color: #dbcbbd;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.title-seccion-mesa{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color: #3f3f3f !important;
+}
+
+.card-mesa{
+    background-color: #dbcbbd;
+    border: 0px;
+}
+
+.seccion-redes{
+    background-color: #b1cac2;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.title-seccion-redes{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color: #3f3f3f !important;
+}
+
+.card-redes{
+    background-color: #b1cac2;
+    border: 0px;
+}
