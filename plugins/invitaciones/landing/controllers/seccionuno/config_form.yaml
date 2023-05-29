@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Seccion Uno
+name: sección
 
 # Model Form Field configuration
 form: $/invitaciones/landing/models/seccionuno/fields.yaml
