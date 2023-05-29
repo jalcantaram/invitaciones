@@ -22,7 +22,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Saving SeccionDos..."
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <u>G</u>uardar
                 </button>
                 <button
                     type="button"
@@ -31,7 +31,7 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Saving SeccionDos..."
                     class="btn btn-default">
-                    Save and Close
+                    Guardar y Cerrar
                 </button>
                 <button
                     type="button"
@@ -39,10 +39,10 @@
                     data-request="onDelete"
                     data-load-indicator="Deleting SeccionDos..."
                     data-load-indicator="Deleting SeccionDos..."
-                    data-request-confirm="Delete this secciondo?">
+                    data-request-confirm="Desea eliminar esta sección?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('invitaciones/landing/secciondos') ?>">Cancel</a>
+                    o &nbsp;<a href="<?= Backend::url('invitaciones/landing/secciondos') ?>">Cancelar</a>
                 </span>
             </div>
         </div>
@@ -52,6 +52,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('invitaciones/landing/secciondos') ?>" class="btn btn-default">Return to seccion dos list</a></p>
+    <p><a href="<?= Backend::url('invitaciones/landing/secciondos') ?>" class="btn btn-default">Regresar a la lista</a></p>
 
 <?php endif ?>

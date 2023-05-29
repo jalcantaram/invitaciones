@@ -1,17 +1,19 @@
 <section class="invitacion-section mb-5">
     <div class="container">
-        <div class="rlan">
-            <di class="row">
-                <div class="col-sm-6 col-6 text-center">
-                    <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_novia.path }}) no-repeat center;"></div>
-                </div>
-                <div class="col-sm-6 col-6 text-center">
-                    <div class="foto-novios mb-3 mt-3 foto-novio" style="background: url({{ secciontres.dataSeccion.foto_novio.path }}) no-repeat center;"></div>
-                </div>
-            </di>
-        </div>
         <div class="row event-container">
-            <div class="event-wrap ceremonia-wrap">
+            <div class="col-md-4 text-center event-wrap mb-5">
+                <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_coctel.path }}) no-repeat center;"></div>
+                <h3>Coctel</h3>
+                <p>"{{ secciontres.dataSeccion.subtitulo_coctel }}"<br>{{ secciontres.dataSeccion.donde_coctel }}</p>
+                <div class="event-btn">
+                    <div class="event-hra">
+                        {{ secciontres.dataSeccion.hora_coctel | date('H:i') }} pm
+                    </div>
+                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_coctel }}">Llevarme</a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center event-wrap mb-5">
+                <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_ceremonia.path }}) no-repeat center;"></div>
                 <h3>Ceremonia</h3>
                 <p>"{{ secciontres.dataSeccion.subtitulo_ceremonia }}"<br>{{ secciontres.dataSeccion.donde_ceremonia }}</p>
                 <div class="event-btn">
@@ -21,14 +23,15 @@
                     <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_ceremonia }}">Llevarme</a>
                 </div>
             </div>
-            <div class="event-wrap fiesta-wrap">
-                <h3>Fiesta</h3>
-                <p>"{{ secciontres.dataSeccion.subtitulo_recepcion }}"<br>{{ secciontres.dataSeccion.donde_recepcion }}</p>
+            <div class="col-md-4 text-center event-wrap mb-5">
+                <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_cena.path }}) no-repeat center;"></div>
+                <h3>Cena</h3>
+                <p>"{{ secciontres.dataSeccion.subtitulo_cena }}"<br>{{ secciontres.dataSeccion.donde_cena }}</p>
                 <div class="event-btn">
                     <div class="event-hra">
-                        {{ secciontres.dataSeccion.hora_recepcion | date('H:i') }} pm
+                        {{ secciontres.dataSeccion.hora_cena | date('H:i') }} pm
                     </div>
-                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_recepcion }}">Llevarme</a>
+                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_cena }}">Llevarme</a>
                 </div>
             </div>
         </div>

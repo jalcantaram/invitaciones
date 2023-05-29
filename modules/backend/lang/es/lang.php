@@ -182,7 +182,7 @@ return [
         'remove_file' => 'Eliminar archivo'
     ],
     'form' => [
-        'create_title' => 'Nuevo :name',
+        'create_title' => 'Nueva :name',
         'update_title' => 'Editar :name',
         'preview_title' => 'Vista previa de :name',
         'create_success' => ':name creado',
