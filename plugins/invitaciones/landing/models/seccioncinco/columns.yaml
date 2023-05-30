@@ -6,7 +6,7 @@ columns:
     thumb:
         label: 'imagen previa'
         type: img_carousel_thumb
-        width: 230px
+        width: 200px
         searchable: false
         sortable: false
     titulo:

@@ -9,7 +9,7 @@ list: $/invitaciones/landing/models/seccioncinco/columns.yaml
 modelClass: Invitaciones\Landing\Models\SeccionCinco
 
 # List Title
-title: Manage Seccion Cincos
+title: Manage sliders
 
 # Link URL for each record
 recordUrl: invitaciones/landing/seccioncinco/update/:id

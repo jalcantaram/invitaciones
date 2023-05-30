@@ -4568,7 +4568,7 @@ table.table.data .list-checkbox {width:52px;vertical-align:top;border-right:1px 
 table.table.data .list-checkbox .checkbox {margin:0;min-height:0}
 table.table.data .list-checkbox .custom-checkbox {position:relative;top:-14px;left:-2px}
 table.table.data .list-checkbox .custom-checkbox label {margin-right:0;margin-bottom:0}
-table.table.data tbody tr td.list-checkbox {padding-left:17px;padding-right:3px}
+table.table.data tbody tr td.list-checkbox {padding-left:17px;padding-right:3px;vertical-align:middle}
 table.table.data thead tr th.list-checkbox {padding:18px 0 0 20px}
 table.table.data .list-tree {width:10px;padding:0;padding-left:0 !important;vertical-align:middle}
 table.table.data .list-tree a.list-expand-collapse {padding:5px;display:block;text-align:center;font-size:14px;position:relative;text-decoration:none !important;color:#999}

@@ -58,6 +58,7 @@ class Plugin extends PluginBase
             'Invitaciones\Landing\Components\SeccionTres' => 'secciontres',
             'Invitaciones\Landing\Components\SeccionCuatro' => 'seccioncuatro',
             'Invitaciones\Landing\Components\SeccionCinco' => 'seccioncinco',
+            'Invitaciones\Landing\Components\SeccionSiete' => 'seccionsiete',
         ];
     }
 

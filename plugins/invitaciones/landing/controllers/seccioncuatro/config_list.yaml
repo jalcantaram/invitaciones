@@ -9,7 +9,7 @@ list: $/invitaciones/landing/models/seccioncuatro/columns.yaml
 modelClass: Invitaciones\Landing\Models\SeccionCuatro
 
 # List Title
-title: Manage Seccion Cuatros
+title: Registro de invitados
 
 # Link URL for each record
 recordUrl: 

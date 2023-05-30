@@ -9,7 +9,7 @@ list: $/invitaciones/landing/models/secciondos/columns.yaml
 modelClass: Invitaciones\Landing\Models\SeccionDos
 
 # List Title
-title: Manage Seccion Dos
+title: Hoteles recomendados
 
 # Link URL for each record
 recordUrl: invitaciones/landing/secciondos/update/:id

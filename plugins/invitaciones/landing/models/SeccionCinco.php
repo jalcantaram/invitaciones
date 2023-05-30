@@ -79,7 +79,7 @@ class SeccionCinco extends Model
 
     public function getThumbAttribute()
     {
-        return $this->image ? $this->image->getThumb(220, 100) : null;
+        return $this->image ? $this->image->getThumb(200, 100) : null;
     }
 
 }

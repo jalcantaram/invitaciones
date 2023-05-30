@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Seccion Cinco
+name: image de presentación
 
 # Model Form Field configuration
 form: $/invitaciones/landing/models/seccioncinco/fields.yaml

@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Seccion Cuatro</a></li>
+        <li><a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Sección - Registro de invitados</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -21,7 +21,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating SeccionCuatro..."
                     class="btn btn-primary">
-                    Create
+                    Crear nueva invitación
                 </button>
                 <button
                     type="button"
@@ -30,10 +30,10 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating SeccionCuatro..."
                     class="btn btn-default">
-                    Create and Close
+                    Crear y Cerrar
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Cancel</a>
+                    o &nbsp;<a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Cancelar</a>
                 </span>
             </div>
         </div>
@@ -43,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>" class="btn btn-default">Return to seccion cuatro list</a></p>
+    <p><a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>" class="btn btn-default">Regresar a la lista</a></p>
 
 <?php endif ?>
