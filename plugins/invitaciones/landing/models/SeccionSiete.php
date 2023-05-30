@@ -22,7 +22,7 @@ class SeccionSiete extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['*' ];
+    protected $fillable = ['*'];
 
     /**
      * @var array Validation rules for attributes

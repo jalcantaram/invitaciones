@@ -9,7 +9,7 @@ list: $/invitaciones/landing/models/seccionsiete/columns.yaml
 modelClass: Invitaciones\Landing\Models\SeccionSiete
 
 # List Title
-title: Manage Seccion Sietes
+title: Sección Padres de los novios
 
 # Link URL for each record
 recordUrl: invitaciones/landing/seccionsiete/update/:id

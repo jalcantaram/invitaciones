@@ -21,7 +21,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating SeccionSiete..."
                     class="btn btn-primary">
-                    Create
+                    Crear sección padres de los novios
                 </button>
                 <button
                     type="button"
@@ -30,10 +30,10 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating SeccionSiete..."
                     class="btn btn-default">
-                    Create and Close
+                    Crear y Cerrar
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('invitaciones/landing/seccionsiete') ?>">Cancel</a>
+                    o &nbsp;<a href="<?= Backend::url('invitaciones/landing/seccionsiete') ?>">Cancelar</a>
                 </span>
             </div>
         </div>
@@ -43,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('invitaciones/landing/seccionsiete') ?>" class="btn btn-default">Return to seccion siete list</a></p>
+    <p><a href="<?= Backend::url('invitaciones/landing/seccionsiete') ?>" class="btn btn-default">Regresar a la lista</a></p>
 
 <?php endif ?>

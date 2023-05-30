@@ -13,7 +13,7 @@ class SeccionSiete extends ComponentBase
         ];
     }
 
-    public function dataSession()
+    public function dataSeccion()
     {
         $seccionsiete = SeccionSieteModel::first();
         return $seccionsiete;

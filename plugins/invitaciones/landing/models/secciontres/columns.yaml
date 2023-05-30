@@ -6,10 +6,14 @@ columns:
     id:
         label: ID
         searchable: true
+    subtitulo_coctel:
+        label : COCTEL
     subtitulo_ceremonia:
-        label : SUBTITULO CEREMONIA
+        label : CEREMONIA
+    subtitulo_cena:
+        label : CENA
         searchable: true
-    subtitulo_recepcion:
-        label: SUBTITULO RECEPCION
+    fecha_celebracion:
+        label: FECHA CELEBRACIÓN
         searchable: true
 

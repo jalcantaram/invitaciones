@@ -235,12 +235,12 @@ html {
 .event-wrap h3 {
     font-family: 'Parisienne';
     font-style: italic;
-    font-size: 28px;
+    font-size: 34px;
     margin-bottom: 14px;
 }
 .event-wrap p {
     font-family: 'Poiret One';
-    line-height: 26px;
+    line-height: 28px;
 }
 .contador-container {
     text-align: center;
@@ -563,12 +563,24 @@ audio:not([controls]) {
     color: #4d4d4d !important;
 }
 
-.seccion-fotos{
-    padding: 64px 0;
-    background: #f9f4ef;
+.seccion-papas-novios{
+    background: #edf5f7;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+.seccion-fotos{
+    padding: 64px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-color: #252c4a; 
+    position: relative;
+    overflow: hidden;
 }
 
 .title-seccion-fotos{
@@ -580,19 +592,14 @@ audio:not([controls]) {
 }
 
 .seccion-hospedaje{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; 
-    background-color: #252c4a; 
-    position: relative;
-    overflow: hidden;
+    background: #f0eff9;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
 }
 
 .seccion-mesa{
-    background-color: #dbcbbd;
+    background-color: #ebe4de;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -607,12 +614,12 @@ audio:not([controls]) {
 }
 
 .card-mesa{
-    background-color: #dbcbbd;
+    background-color: #e2d5ca;
     border: 0px;
 }
 
 .seccion-redes{
-    background-color: #b1cac2;
+    background-color: #d6e9e3;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -627,6 +634,35 @@ audio:not([controls]) {
 }
 
 .card-redes{
-    background-color: #b1cac2;
+    background-color: #9fbbb3;
     border: 0px;
+}
+
+.card-landing{
+    background-color: transparent;
+    background-clip: initial;
+    border: 0;
+    border-radius: 0;
+}
+
+.img-cover {
+    object-fit: cover;
+    object-position: center;
+}
+
+.title-papas-novios{
+    font-size: 23px;
+    line-height: normal;
+    font-family: "Poiret One";
+    font-style: normal;
+    color: #4d4d4d;
+    font-weight: 600;
+}
+
+.title-seccion-papas{
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Great Vibes';
+    color: #4d4d4d;
 }

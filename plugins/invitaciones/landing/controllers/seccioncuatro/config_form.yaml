@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Seccion Cuatro
+name: invitación
 
 # Model Form Field configuration
 form: $/invitaciones/landing/models/seccioncuatro/fields.yaml
