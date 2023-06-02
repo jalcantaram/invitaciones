@@ -27,7 +27,8 @@
                             data-request="onSendWhatsAppInvitacion"
                             data-request-confirm="Deseas enviar la invitación por whatsapp?"
                             data-stripe-load-indicator
-                            data-request-data=" rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                            data-request-data="rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
+                            data-request-success="window.open(data.result, '_blank');"
                             >Enviar whatsapp de invitación</button>
                         </div>
                     <?php endif ?>

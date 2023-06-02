@@ -45,11 +45,11 @@ class SeccionCuatro extends Controller
         
         $sc = SeccionCuatroModel::findOrFail($_id);
 
-        $link = \Url::to('/'.'?code='.$sc->token);
-        
+        // $link = \Url::to('/'.'?code='.$sc->token);
+
         $data = [
             'name' => $sc->nombre_completo,
-            'link' => $link,
+            'link' => $sc->shortUrl,
         ];
         
         $sc->estatus = 2;
@@ -72,9 +72,7 @@ class SeccionCuatro extends Controller
         
         $sc = SeccionCuatroModel::findOrFail($_id);
 
-        $link = \Url::to('/'.'?code='.$sc->token);
-
-        $whatsapp = 'https://api.whatsapp.com/send?phone='.$sc->celular.'&text=%C2%A1Hola%20%2A'.$sc->nombre_completo.'%2A%21%20Por%20favor%20confirma%20tu%20asistencia%20en%20el%20siguiente%20link%3A%20'.urlencode($link).'%23asistencia';
+        $whatsapp = 'https://api.whatsapp.com/send?phone='.$sc->celular.'&text=%C2%A1Hola%20%2A'.urlencode($sc->nombre_completo).'%2A%21%20Por%20favor%20confirma%20tu%20asistencia%20a%20la%20%C2%A1%2ABoda%2A%20de%20%2AGriss%2A%20%26%20%2AXavo%2A%21%20en%20el%20siguiente%20link%3A%20'.urlencode($sc->shortUrl);
         \Log::info($whatsapp);
         $sc->estatus = 2;
         $sc->send_whatsapp = true;
@@ -83,6 +81,6 @@ class SeccionCuatro extends Controller
 
         Flash::success('Redireccionando!!!');
 
-        return \Redirect::to($whatsapp);
+        return $whatsapp;
     }
 }
