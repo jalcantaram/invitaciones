@@ -619,18 +619,23 @@ audio:not([controls]) {
 }
 
 .seccion-redes{
-    background-color: #d6e9e3;
+    background-color: #d7d2c9;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
 }
 
 .title-seccion-redes{
-    font-size: 56px;
-    font-weight: 600;
-    letter-spacing: 3px;
+    span{
+        font-weight: 500;
+        letter-spacing: -6px;
+    }
+    font-size: 5.5em;
+    font-weight: 500;
+    letter-spacing: 8px;
     font-family: 'Great Vibes';
     color: #3f3f3f !important;
+    word-wrap: break-word;
 }
 
 .card-redes{
