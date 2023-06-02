@@ -1,6 +1,7 @@
 <?php namespace Invitaciones\Landing\Models;
 
 use Model;
+use October\Rain\Network\Http;
 
 /**
  * SeccionCuatro Model
@@ -143,8 +144,64 @@ class SeccionCuatro extends Model
         ];
     }
     public function afterCreate(){
-        $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
-        $this->estatus = 1;
-        $this->save();
+        try {
+            $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
+
+            $longUrl = \Url::to('/'.'?code='.$this->token).'#asistencia';
+
+            $result = Http::post('https://api.aws3.link/shorten', function($http) use($longUrl){
+                $http->header('x-api-key', 'OfzWtHTjS5gVIAx7ixn84uQ3taQbmYjbHVlJzIj0');
+                $http->header('Content-Type', 'application/json');
+                $payload = [
+                    'longUrl' => $longUrl
+                ];
+                $http->setOption(CURLOPT_POSTFIELDS, json_encode($payload));
+            });
+
+            if($result->code == 200){
+                $this->response = $result->body;
+                $resultado = json_decode($result->body, true);
+                $this->longUrl = $longUrl;
+                $this->shortUrl = $resultado['shortUrl'];
+            } else {
+                abort(401);
+            }
+
+            $this->estatus = 1;
+            $this->save();
+        } catch (\Exception $th) {
+            \Log::info($th);
+            abort(402);
+        }
+    }
+
+    public function afterSave(){
+        if(is_null($this->shortUrl)){
+            try {
+                $longUrl = \Url::to('/'.'?code='.$this->token).'#asistencia';
+    
+                $result = Http::post('https://api.aws3.link/shorten', function($http) use($longUrl){
+                    $http->header('x-api-key', 'OfzWtHTjS5gVIAx7ixn84uQ3taQbmYjbHVlJzIj0');
+                    $http->header('Content-Type', 'application/json');
+                    $payload = [
+                        'longUrl' => $longUrl
+                    ];
+                    $http->setOption(CURLOPT_POSTFIELDS, json_encode($payload));
+                });
+    
+                if($result->code == 200){
+                    $this->response = $result->body;
+                    $resultado = json_decode($result->body, true);
+                    $this->longUrl = $longUrl;
+                    $this->shortUrl = $resultado['shortUrl'];
+                } else {
+                    abort(401);
+                }
+                $this->save();
+            } catch (\Exception $th) {
+                \Log::info($th);
+                abort(402);
+            }
+        }
     }
 }

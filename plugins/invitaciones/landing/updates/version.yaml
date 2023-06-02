@@ -24,3 +24,6 @@
       - Create CAT ESTATUS
       - create_cat_estatuses_table.php
       - seed_cat_estatuses_table.php
+1.1.0:
+      - ADD se agregan campos de respuesta de SHORTING URL AWS3
+      - add_new_fields_seccion_cuatros_table.php
