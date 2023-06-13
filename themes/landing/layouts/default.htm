@@ -288,12 +288,12 @@ function onStart(){
                     <div class="iniciales">
                         <span>G</span>
                         <div class="divisor"></div>
-                            <span>X</span>
-                        </div>
-                        <br>
-                        <h4>Código NO valido.</h4>
-                        <br>
+                        <span>X</span>
                     </div>
+                    <br>
+                    <h4>Código NO valido.</h4>
+                    <br>
+                    <!-- </div> -->
                 </form>
             {% else %}
                 <form id="deseos" class="form-reservacion">
@@ -317,20 +317,22 @@ function onStart(){
                             <span>X</span>
                         </div>
                         <h4>Confirma tu Asistencia</h4>
-                        <div class="row">
-                            <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" readonly disabled>
+                        <div class="row mt-5 mb-3">
+                            <div class="col-md-12">
+                                <input required="" type="text" placeholder="· Nombre completo" class="usr-nombre" readonly disabled>
+                            </div>
                         </div>
-                        <div class="row col-12">
-                            <div class="col-md-6 col-6 inputs-cols-left"> 
+                        <div class="row mb-4">
+                            <div class="col-md-6"> 
                                 <input type="email" placeholder="· Email" class="usr-correo" readonly disabled>
                             </div>
-                            <div class="col-md-6 col-6 inputs-cols-right"> 
+                            <div class="col-md-6"> 
                                 <input type="tel" placeholder="· Teléfono" class="usr-telefono" pattern="[5]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" maxlength="10" minlength="10" readonly disabled>
                             </div>
                         </div>
                         <hr>
-                        <div class="row col-12">
-                            <div class="col-md-12 col-12 inputs-cols-left inputs-cols-right mb-4">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
                                 <select id="asistencia" class="asistencia mb-1">
                                     <option value="" disabled="" selected="">· Asistencia</option>
                                     {% for key, asistencia in asistencias %}
@@ -339,7 +341,7 @@ function onStart(){
                                 </select>
                                 <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="asistencia"></div>
                             </div>
-                            <div class="col-md-6 col-6 inputs-cols-left">
+                            <div class="col-md-6 mb-3">
                                 <select id="proteina" class="proteina mb-1">
                                     <option value="" disabled="" selected="">· Preferencia de proteina</option>
                                     {% for key, comida in comidas %}
@@ -348,7 +350,7 @@ function onStart(){
                                 </select>
                                 <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="proteina"></div>
                             </div>
-                            <div class="col-md-6 col-6 inputs-cols-right">
+                            <div class="col-md-6">
                                 <select id="bebida" class="bebida mb-1">
                                     <option value="" disabled="" selected="">· Preferencia de Bebidas</option>
                                     {% for key, bebida in bebidas %}
@@ -359,8 +361,10 @@ function onStart(){
                             </div>
                         </div>
                         <div class="row">
-                            <textarea type="text" placeholder="· Dedica un mensaje..." class="deseos-invitados mb-1" name="mensaje"></textarea>
-                            <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="mensaje"></div>
+                            <div class="col-md-12">
+                                <textarea type="text" placeholder="· Dedica un mensaje..." class="deseos-invitados mb-1" name="mensaje"></textarea>
+                                <div class="alert alert-light link-danger mb-0 pt-1 pb-1" role="alert" data-validate-for="mensaje"></div>
+                            </div>
                         </div>
                         <button type="button" class="btn-grl">Confirmar</button>
                     </div>
