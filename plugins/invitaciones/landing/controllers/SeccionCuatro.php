@@ -7,6 +7,8 @@ use Flash;
 use Backend;
 use Request;
 use Invitaciones\Landing\Models\SeccionCuatro as SeccionCuatroModel;
+use ApplicationException;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Seccion Cuatro Back-end Controller
@@ -82,5 +84,54 @@ class SeccionCuatro extends Controller
         Flash::success('Redireccionando!!!');
 
         return $whatsapp;
+    }
+
+    public function onDownload(){
+        $data = SeccionCuatroModel::all();
+        // \Log::info(count($data));
+        if(count($data) == 0){
+            throw new ApplicationException('No existen DATOS para descargar.');
+        }
+
+        $c = new SeccionCuatroModel;
+        $comidas = $c->listPreferenciaComida('', '', '');
+        $bebidas = $c->listPreferenciaBebida('', '', '');
+        $asistencias = $c->listAsistencia('', '', '');
+        $mesas = $c->listMesa('', '', '');
+
+        $result = [];
+        $count = 1;
+        foreach ($data as $key => $value) {
+            $result[$key]['id'] = $count++;
+            $result[$key]['nombre_completo'] = $value->nombre_completo;
+            $result[$key]['email'] = $value->email;
+            $result[$key]['celular'] = $value->celular;
+            $result[$key]['asistencia'] = isset($asistencias[$value->asistencia]) ? $asistencias[$value->asistencia] : '';
+            $result[$key]['preferencia_comida'] = isset($comidas[$value->preferencia_comida]) ? $comidas[$value->preferencia_comida] : '';
+            $result[$key]['preferencia_bebidas'] = isset($bebidas[$value->preferencia_bebidas]) ? $bebidas[$value->preferencia_bebidas] : '';
+            $result[$key]['mesa'] = isset($mesas[$value->numero_mesa]) ? $mesas[$value->numero_mesa] : '';
+            $result[$key]['mensaje'] = $value->mensaje;
+            $result[$key]['shortUrl'] = $value->shortUrl;
+            $result[$key]['estatus'] = $value->cat_estatus->descripcion;
+        }
+
+        $filename = 'invitaciones_reporte'.time().'.csv';
+
+        $fiveMBs = 5* 1024 * 1024;
+        $f = fopen('php://temp/maxmemory:'.$fiveMBs, 'r+');
+
+        //set column headers
+        $fields = array('ID', 'Nombre completo', 'Email', 'Telefono', 'Asistencia', 'Preferencia comida', 'Preferencia bebida', 'Mesa', 'Mensaje', 'URL', 'Estatus');
+        fputcsv($f, $fields);
+
+        foreach ($result as $d) {
+            fputcsv($f, $d);
+        }
+        rewind($f);
+        $output = stream_get_contents($f);
+        $fd = Storage::disk('local')->put('media/'.$filename, $f);
+        Flash::success('Reporte creado exitosamente');
+        // return Response::to(Storage::url('media/'.$filename));
+        return Storage::url('media/'.$filename);
     }
 }
