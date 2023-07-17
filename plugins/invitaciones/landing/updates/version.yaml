@@ -27,3 +27,6 @@
 1.1.0:
       - ADD se agregan campos de respuesta de SHORTING URL AWS3
       - add_new_fields_seccion_cuatros_table.php
+1.1.1:
+      - ADD se agregan campos de numero de invitados
+      - add_new_fields_dos_seccion_cuatros_table.php
