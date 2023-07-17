@@ -33,6 +33,7 @@ class SeccionCuatro extends Model
         'email' => 'required|email|unique:invitaciones_landing_seccion_cuatros',
         'celular' => ['required','regex:/^([1-9]{1})?([1-9]{1})?([1-9]{1})?([0-9]{7})$/'],
         'numero_mesa' => 'required',
+        'numero_invitados' => 'required',
     ];
 
     /**
