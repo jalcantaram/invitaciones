@@ -354,7 +354,8 @@ html {
     font-size: 34px!important;
     font-family: var(--fuente-titulos)!important;
     font-style: italic!important;
-    margin-right: 30px;
+    margin-right: 40px;
+    text-align: left;
 }
 
 .divisor {
@@ -631,7 +632,7 @@ audio:not([controls]) {
         font-weight: 500;
         // letter-spacing: -6px;
     }
-    font-size: 5.5em;
+    font-size: 3.8em;
     font-weight: 500;
     // letter-spacing: 2px;
     font-family: 'Poiret One';

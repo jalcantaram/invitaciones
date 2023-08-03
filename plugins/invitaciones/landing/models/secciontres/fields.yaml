@@ -9,6 +9,13 @@ fields:
         required: true
         type: datepicker
         span: full
+    link_googlemaps_ceremonia:
+        label: Link de google maps para saber llegar a la ceremonia
+        placeholder: Link de google maps para saber llegar a la ceremonia
+        description: Link de google maps para saber llegar a la ceremonia
+        required: true
+        type: text
+        span: left
 tabs:
     stretch: true
     defaultTab: Coctel
@@ -31,8 +38,7 @@ tabs:
             description: Ej. "Finca San Javier"
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Coctel
         donde_coctel:
             label: Dirección del lugar donde será la coctel
@@ -40,8 +46,7 @@ tabs:
             description: Dirección del lugar donde será la coctel
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: right
             tab: Coctel
         hora_coctel:
             label: Hora de la coctel
@@ -50,17 +55,7 @@ tabs:
             required: true
             type: datepicker
             mode: time
-            span: storm
-            cssClass: col-xs-6
-            tab: Coctel
-        link_googlemaps_coctel:
-            label: Link de google maps para saber llegar a la coctel
-            placeholder: Link de google maps para saber llegar a la coctel
-            description: Link de google maps para saber llegar a la coctel
-            required: true
-            type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Coctel
         foto_lugar_coctel:
             label: Foto del lugar donde será el coctel
@@ -81,8 +76,7 @@ tabs:
                 sharpen: 0
                 interlace: false
                 extension: auto
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Coctel
         subtitulo_ceremonia:
             label: Nombre del lugar donde será la ceremonia
@@ -90,8 +84,7 @@ tabs:
             description: Ej. "Finca San Javier"
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Ceremonia
         donde_ceremonia:
             label: Dirección del lugar donde será la ceremonia
@@ -99,8 +92,7 @@ tabs:
             description: Dirección del lugar donde será la ceremonia
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: right
             tab: Ceremonia
         hora_ceremonia:
             label: Hora de la ceremonia
@@ -109,17 +101,7 @@ tabs:
             required: true
             type: datepicker
             mode: time
-            span: storm
-            cssClass: col-xs-6
-            tab: Ceremonia
-        link_googlemaps_ceremonia:
-            label: Link de google maps para saber llegar a la ceremonia
-            placeholder: Link de google maps para saber llegar a la ceremonia
-            description: Link de google maps para saber llegar a la ceremonia
-            required: true
-            type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Ceremonia
         foto_lugar_ceremonia:
             label: Foto del lugar donde será la ceremonia
@@ -140,8 +122,7 @@ tabs:
                 sharpen: 0
                 interlace: false
                 extension: auto
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Ceremonia
         subtitulo_cena:
             label: Nombre del lugar donde será la cena
@@ -149,8 +130,7 @@ tabs:
             description: Ej. "Finca San Javier"
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Cena
         donde_cena:
             label: Dirección del lugar donde será la cena
@@ -158,8 +138,7 @@ tabs:
             description: Dirección del lugar donde será la cena
             required: true
             type: text
-            span: storm
-            cssClass: col-xs-6
+            span: right
             tab: Cena
         hora_cena:
             label: Hora de la cena
@@ -168,17 +147,7 @@ tabs:
             required: true
             type: datepicker
             mode: time
-            span: storm
-            cssClass: col-xs-6
-            tab: Cena
-        link_googlemaps_cena:
-            label: Link de google maps para saber llegar a la cena
-            placeholder: Link de google maps para saber llegar a la cena
-            description: Link de google maps para saber llegar a la cena
-            required: true
-            type: text
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Cena
         foto_lugar_cena:
             label: Foto del lugar donde será la cena
@@ -199,7 +168,6 @@ tabs:
                 sharpen: 0
                 interlace: false
                 extension: auto
-            span: storm
-            cssClass: col-xs-6
+            span: left
             tab: Cena
 
