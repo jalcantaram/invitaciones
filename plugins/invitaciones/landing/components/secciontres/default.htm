@@ -9,7 +9,6 @@
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_coctel | date('H:i') }} pm
                     </div>
-                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_coctel }}">Llevarme</a>
                 </div>
             </div>
             <div class="col-md-4 text-center event-wrap mb-5">
@@ -20,7 +19,6 @@
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_ceremonia | date('H:i') }} pm
                     </div>
-                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_ceremonia }}">Llevarme</a>
                 </div>
             </div>
             <div class="col-md-4 text-center event-wrap mb-5">
@@ -31,10 +29,16 @@
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_cena | date('H:i') }} pm
                     </div>
-                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_cena }}">Llevarme</a>
                 </div>
             </div>
         </div>
+        {% if secciontres.dataSeccion.link_googlemaps_ceremonia %}
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_ceremonia }}">Llevarme</a>
+                </div>
+            </div>
+        {% endif %}
         <div data-fecha="i" class="contador-container" id="contador">
             
         </div>
