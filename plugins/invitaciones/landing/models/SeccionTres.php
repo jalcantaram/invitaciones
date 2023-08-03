@@ -29,20 +29,20 @@ class SeccionTres extends Model
      */
     public $rules = [
         'fecha_celebracion' => 'required',
-        'subtitulo_coctel' => 'required',
-        'donde_coctel' => 'required',
+        // 'subtitulo_coctel' => 'required',
+        // 'donde_coctel' => 'required',
         'hora_coctel' => 'required',
         'foto_lugar_coctel' => 'required',
-        'subtitulo_ceremonia' => 'required',
-        'donde_ceremonia' => 'required',
         'hora_ceremonia' => 'required',
         'foto_lugar_ceremonia' => 'required',
-        'subtitulo_cena' => 'required',
-        'donde_cena' => 'required',
+        // 'subtitulo_cena' => 'required',
+        // 'donde_cena' => 'required',
         'hora_cena' => 'required',
         'foto_lugar_cena' => 'required',
         // 'link_googlemaps_cena' => 'required',
         // 'link_googlemaps_coctel' => 'required',
+        'subtitulo_ceremonia' => 'required',
+        'donde_ceremonia' => 'required',
         'link_googlemaps_ceremonia' => 'required',
         
     ];
