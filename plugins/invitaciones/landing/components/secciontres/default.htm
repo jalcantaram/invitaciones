@@ -1,30 +1,27 @@
 <section class="invitacion-section mb-5">
     <div class="container">
         <div class="row event-container">
-            <div class="col-md-4 text-center event-wrap mb-5">
+            <div class="col-md-4 text-center event-wrap mb-4">
                 <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_coctel.path }}) no-repeat center;"></div>
-                <h3>Coctel</h3>
-                <p>"{{ secciontres.dataSeccion.subtitulo_coctel }}"<br>{{ secciontres.dataSeccion.donde_coctel }}</p>
+                <h3>Bienvenida</h3>
                 <div class="event-btn">
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_coctel | date('H:i') }} pm
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 text-center event-wrap mb-5">
+            <div class="col-md-4 text-center event-wrap mb-4">
                 <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_ceremonia.path }}) no-repeat center;"></div>
                 <h3>Ceremonia</h3>
-                <p>"{{ secciontres.dataSeccion.subtitulo_ceremonia }}"<br>{{ secciontres.dataSeccion.donde_ceremonia }}</p>
                 <div class="event-btn">
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_ceremonia | date('H:i') }} pm
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 text-center event-wrap mb-5">
+            <div class="col-md-4 text-center event-wrap mb-4">
                 <div class="foto-novios mb-3 mt-3 foto-novia" style="background: url({{ secciontres.dataSeccion.foto_lugar_cena.path }}) no-repeat center;"></div>
                 <h3>Cena</h3>
-                <p>"{{ secciontres.dataSeccion.subtitulo_cena }}"<br>{{ secciontres.dataSeccion.donde_cena }}</p>
                 <div class="event-btn">
                     <div class="event-hra">
                         {{ secciontres.dataSeccion.hora_cena | date('H:i') }} pm
@@ -35,6 +32,7 @@
         {% if secciontres.dataSeccion.link_googlemaps_ceremonia %}
             <div class="row">
                 <div class="col-md-12 text-center">
+                    <p style="font-family: 'Poiret One';line-height: 28px;font-size: 22px;">"{{ secciontres.dataSeccion.subtitulo_ceremonia }}"<br>{{ secciontres.dataSeccion.donde_ceremonia }}</p>
                     <a target="_blank" class="btn-grl" href="{{ secciontres.dataSeccion.link_googlemaps_ceremonia }}">Llevarme</a>
                 </div>
             </div>
