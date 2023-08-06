@@ -12,16 +12,7 @@
             <div class="layout-row">
                 <div class="form-widget form-elements layout">
                     <?php  if(isset($this->widget->form->data) && $this->widget->form->data->estatus != '5'): ?>
-                        <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
-                            <button 
-                                class="btn btn-sm btn-success"
-                                data-request="onSendInvitacion"
-                                data-request-confirm="Deseas enviar la invitación por correo electrónico?"
-                                data-stripe-load-indicator
-                                data-request-data="rowid: <?php echo isset($this->widget->form->data->id) ? $this->widget->form->data->id : 0 ?>"
-                                >Enviar correo de invitación</button>
-                        </div>
-                        <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-6" style="text-align: center;">
+                        <div class="form-group  text-field span-storm is-required  p-l-0 col-xs-12" style="text-align: center;">
                             <button 
                             class="btn btn-sm btn-success"
                             data-request="onSendWhatsAppInvitacion"
@@ -40,30 +31,32 @@
 
         <div class="form-buttons">
             <div class="loading-indicator-container">
-                <button
-                    type="submit"
-                    data-request="onSave"
-                    data-request-data="redirect:0"
-                    data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving SeccionCuatro..."
-                    class="btn btn-primary">
-                    <u>G</u>uardar
-                </button>
-                <button
-                    type="button"
-                    data-request="onSave"
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving SeccionCuatro..."
-                    class="btn btn-default">
-                    Guardar y cerrar
-                </button>
+                <?php  if(isset($this->widget->form->data) && $this->widget->form->data->estatus != '5'): ?>
+                    <button
+                        type="submit"
+                        data-request="onSave"
+                        data-request-data="redirect:0"
+                        data-hotkey="ctrl+s, cmd+s"
+                        data-load-indicator="Saving SeccionCuatro..."
+                        class="btn btn-primary">
+                        <u>G</u>uardar
+                    </button>
+                    <button
+                        type="button"
+                        data-request="onSave"
+                        data-request-data="close:1"
+                        data-hotkey="ctrl+enter, cmd+enter"
+                        data-load-indicator="Saving SeccionCuatro..."
+                        class="btn btn-default">
+                        Guardar y cerrar
+                    </button>
+                <?php endif ?>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Deleting SeccionCuatro..."
-                    data-request-confirm="Delete this seccioncuatro?">
+                    data-load-indicator="Eliminando registro..."
+                    data-request-confirm="Desea eliminar el registro?">
                 </button>
                 <span class="btn-text">
                     o &nbsp;<a href="<?= Backend::url('invitaciones/landing/seccioncuatro') ?>">Cancelar</a>
