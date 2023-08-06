@@ -40,32 +40,32 @@ class SeccionCuatro extends Controller
         BackendMenu::setContext('Invitaciones.Landing', 'landing', 'seccioncuatro');
     }
 
-    public function onSendInvitacion(){
-        $data = post();
+    // public function onSendInvitacion(){
+    //     $data = post();
         
-        $_id = (int) $data['rowid'];
+    //     $_id = (int) $data['rowid'];
         
-        $sc = SeccionCuatroModel::findOrFail($_id);
+    //     $sc = SeccionCuatroModel::findOrFail($_id);
 
-        // $link = \Url::to('/'.'?code='.$sc->token);
+    //     // $link = \Url::to('/'.'?code='.$sc->token);
 
-        $data = [
-            'name' => $sc->nombre_completo,
-            'link' => $sc->shortUrl,
-        ];
+    //     $data = [
+    //         'name' => $sc->nombre_completo,
+    //         'link' => $sc->shortUrl,
+    //     ];
         
-        $sc->estatus = 2;
-        $sc->send_email = true;
-        $sc->send_email_at = now();
-        $sc->save();
+    //     $sc->estatus = 2;
+    //     $sc->send_email = true;
+    //     $sc->send_email_at = now();
+    //     $sc->save();
 
-        Mail::send('landing::send.invitaciones', $data, function ($message) use ($sc) {
-            $message->to($sc->email, $sc->nombre_completo)->subject('Gris & Xavi');
-        });
+    //     Mail::send('landing::send.invitaciones', $data, function ($message) use ($sc) {
+    //         $message->to($sc->email, $sc->nombre_completo)->subject('Gris & Xavi');
+    //     });
         
 
-        Flash::success('Correo enviado exitosamente!');
-    }
+    //     Flash::success('Correo enviado exitosamente!');
+    // }
 
     public function onSendWhatsAppInvitacion(){
         $data = post();

@@ -9,13 +9,6 @@ fields:
         description: Nombre completo del invitado
         required: true
         type: text
-        span: full
-    email:
-        label: Email
-        placeholder: Email
-        description: Email del invitado
-        required: true
-        type: email
         span: left
     celular:
         label: Número de celular

@@ -1,1 +1,3 @@
-<button onclick="location.href= '<?= Backend::url('invitaciones/landing/seccioncuatro/update', $record->id) ?>';" class="btn btn-sm btn-warning">Editar</button>
+<?php if ($record->estatus != 'Confirmado'){ ?>
+    <button onclick="location.href= '<?= Backend::url('invitaciones/landing/seccioncuatro/update', $record->id) ?>';" class="btn btn-sm btn-warning">Editar</button>
+<?php } ?>

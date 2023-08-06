@@ -30,7 +30,7 @@ class SeccionCuatro extends Model
      */
     public $rules = [
         'nombre_completo' => 'required',
-        'email' => 'required|email|unique:invitaciones_landing_seccion_cuatros',
+        // 'email' => 'required|email|unique:invitaciones_landing_seccion_cuatros',
         'celular' => ['required','regex:/^([1-9]{1})?([1-9]{1})?([1-9]{1})?([0-9]{7})$/'],
         'numero_mesa' => 'required',
         'numero_invitados' => 'required',
@@ -146,7 +146,7 @@ class SeccionCuatro extends Model
     }
     public function afterCreate(){
         try {
-            $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->email.$this->celular));
+            $this->token = base64_encode(\Hash::make($this->nombre_completo.$this->celular));
 
             $longUrl = \Url::to('/'.'?code='.$this->token).'#asistencia';
 
